@@ -1,0 +1,6979 @@
+unit Bomber;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
+  Vcl.ImgList, Vcl.StdCtrls, Vcl.XPMan;
+
+type
+  TBomform = class(TForm)
+    player1run1: TTimer;
+    gup: TImage;
+    gleft: TImage;
+    gright: TImage;
+    gdown: TImage;
+    A1: TImage;
+    B1: TImage;
+    C1: TImage;
+    D1: TImage;
+    E1: TImage;
+    F1: TImage;
+    G1: TImage;
+    H1: TImage;
+    I1: TImage;
+    J1: TImage;
+    K1: TImage;
+    L1: TImage;
+    M1: TImage;
+    A2: TImage;
+    B2: TImage;
+    C2: TImage;
+    D2: TImage;
+    E2: TImage;
+    F2: TImage;
+    G2: TImage;
+    H2: TImage;
+    I2: TImage;
+    J2: TImage;
+    K2: TImage;
+    L2: TImage;
+    M2: TImage;
+    A3: TImage;
+    B3: TImage;
+    C3: TImage;
+    D3: TImage;
+    E3: TImage;
+    F3: TImage;
+    G3: TImage;
+    H3: TImage;
+    I3: TImage;
+    J3: TImage;
+    K3: TImage;
+    L3: TImage;
+    M3: TImage;
+    A4: TImage;
+    B4: TImage;
+    C4: TImage;
+    D4: TImage;
+    E4: TImage;
+    F4: TImage;
+    G4: TImage;
+    H4: TImage;
+    I4: TImage;
+    J4: TImage;
+    K4: TImage;
+    L4: TImage;
+    M4: TImage;
+    A5: TImage;
+    B5: TImage;
+    C5: TImage;
+    D5: TImage;
+    E5: TImage;
+    F5: TImage;
+    G5: TImage;
+    H5: TImage;
+    I5: TImage;
+    J5: TImage;
+    K5: TImage;
+    L5: TImage;
+    M5: TImage;
+    A6: TImage;
+    B6: TImage;
+    C6: TImage;
+    D6: TImage;
+    E6: TImage;
+    F6: TImage;
+    G6: TImage;
+    H6: TImage;
+    I6: TImage;
+    J6: TImage;
+    K6: TImage;
+    L6: TImage;
+    M6: TImage;
+    A7: TImage;
+    B7: TImage;
+    C7: TImage;
+    D7: TImage;
+    E7: TImage;
+    F7: TImage;
+    G7: TImage;
+    H7: TImage;
+    I7: TImage;
+    J7: TImage;
+    K7: TImage;
+    L7: TImage;
+    M7: TImage;
+    A8: TImage;
+    B8: TImage;
+    C8: TImage;
+    D8: TImage;
+    E8: TImage;
+    F8: TImage;
+    G8: TImage;
+    H8: TImage;
+    I8: TImage;
+    J8: TImage;
+    K8: TImage;
+    L8: TImage;
+    M8: TImage;
+    A9: TImage;
+    B9: TImage;
+    C9: TImage;
+    D9: TImage;
+    E9: TImage;
+    F9: TImage;
+    G9: TImage;
+    H9: TImage;
+    I9: TImage;
+    J9: TImage;
+    K9: TImage;
+    L9: TImage;
+    M9: TImage;
+    A10: TImage;
+    B10: TImage;
+    C10: TImage;
+    D10: TImage;
+    E10: TImage;
+    F10: TImage;
+    G10: TImage;
+    H10: TImage;
+    I10: TImage;
+    J10: TImage;
+    K10: TImage;
+    L10: TImage;
+    M10: TImage;
+    A11: TImage;
+    B11: TImage;
+    C11: TImage;
+    D11: TImage;
+    E11: TImage;
+    F11: TImage;
+    G11: TImage;
+    H11: TImage;
+    I11: TImage;
+    J11: TImage;
+    K11: TImage;
+    L11: TImage;
+    M11: TImage;
+    A12: TImage;
+    B12: TImage;
+    C12: TImage;
+    D12: TImage;
+    E12: TImage;
+    F12: TImage;
+    G12: TImage;
+    H12: TImage;
+    I12: TImage;
+    J12: TImage;
+    K12: TImage;
+    L12: TImage;
+    M12: TImage;
+    A13: TImage;
+    B13: TImage;
+    C13: TImage;
+    D13: TImage;
+    E13: TImage;
+    F13: TImage;
+    G13: TImage;
+    H13: TImage;
+    I13: TImage;
+    J13: TImage;
+    K13: TImage;
+    L13: TImage;
+    M13: TImage;
+    Player1: TImage;
+    player2: TImage;
+    block: TImageList;
+    player1run2: TTimer;
+    bomb: TImageList;
+    bomb1: TImage;
+    bombb1: TTimer;
+    boom1: TImage;
+    bombt1: TTimer;
+    boomup: TImage;
+    boomleft: TImage;
+    boomdown: TImage;
+    boomright: TImage;
+    boomd1: TImage;
+    boomr1: TImage;
+    boomu1: TImage;
+    booml1: TImage;
+    check: TTimer;
+    menu: TImage;
+    btnstart: TImage;
+    dead: TTimer;
+    pl1dead: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    booml2: TImage;
+    booml3: TImage;
+    booml4: TImage;
+    boomr2: TImage;
+    boomr3: TImage;
+    boomr4: TImage;
+    boomu2: TImage;
+    boomu4: TImage;
+    boomd2: TImage;
+    boomd3: TImage;
+    boomd4: TImage;
+    boomu3: TImage;
+    bombc2: TTimer;
+    bombc1: TTimer;
+    Label7: TLabel;
+    player2run1: TTimer;
+    bombt2: TTimer;
+    player2run2: TTimer;
+    boom2: TImage;
+    bomb2: TImage;
+    boomup2: TImage;
+    boomright2: TImage;
+    boomleft2: TImage;
+    boomdown2: TImage;
+    bombb2: TTimer;
+    boomu21: TImage;
+    boomu22: TImage;
+    boomu23: TImage;
+    boomu24: TImage;
+    boomd21: TImage;
+    boomd24: TImage;
+    boomd23: TImage;
+    boomd22: TImage;
+    booml21: TImage;
+    booml22: TImage;
+    booml23: TImage;
+    booml24: TImage;
+    boomr22: TImage;
+    boomr23: TImage;
+    boomr24: TImage;
+    boomr21: TImage;
+    pl2dead: TImage;
+    dead2: TTimer;
+    bombgo1: TTimer;
+    bombgo2: TTimer;
+    mnut: TTimer;
+    time: TTimer;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    mnu2: TImage;
+    mnui1: TImage;
+    mnui2: TImage;
+    mnui3: TImage;
+    mnui4: TImage;
+    Label11: TLabel;
+    mnui5: TImage;
+    mnui6: TImage;
+    mnui7: TImage;
+    mnui8: TImage;
+    Label12: TLabel;
+    bomb22: TImage;
+    boom12: TImage;
+    boomup12: TImage;
+    boomleft12: TImage;
+    boomright12: TImage;
+    boomd121: TImage;
+    boomr121: TImage;
+    boomu121: TImage;
+    booml121: TImage;
+    boom22: TImage;
+    bomb12: TImage;
+    boomup22: TImage;
+    boomright22: TImage;
+    boomleft22: TImage;
+    boomu221: TImage;
+    boomd221: TImage;
+    booml221: TImage;
+    boomr221: TImage;
+    boomdown12: TImage;
+    boomdown22: TImage;
+    boomr124: TImage;
+    boomr123: TImage;
+    booml122: TImage;
+    booml123: TImage;
+    booml124: TImage;
+    boomr122: TImage;
+    boomu122: TImage;
+    boomu123: TImage;
+    boomd122: TImage;
+    boomd123: TImage;
+    boomd124: TImage;
+    boomu124: TImage;
+    boomu222: TImage;
+    boomu223: TImage;
+    boomu224: TImage;
+    boomd222: TImage;
+    boomd223: TImage;
+    boomd224: TImage;
+    boomr222: TImage;
+    boomr223: TImage;
+    boomr224: TImage;
+    booml222: TImage;
+    booml223: TImage;
+    booml224: TImage;
+    bombt12: TTimer;
+    bombb12: TTimer;
+    bombgo12: TTimer;
+    Timeend: TTimer;
+    Label13: TLabel;
+    Label14: TLabel;
+    btnlearn: TImage;
+    exit: TImage;
+    btnoption: TImage;
+    btntitre: TImage;
+    learn1: TImage;
+    learn2: TImage;
+    learn3: TImage;
+    learn4: TImage;
+    Titer: TImage;
+    Option: TImage;
+    dead12: TImage;
+    dead22: TImage;
+    win1: TImage;
+    win2: TImage;
+    bombt22: TTimer;
+    bombb22: TTimer;
+    bombgo22: TTimer;
+    bomb15: TImage;
+    boom13: TImage;
+    boomup13: TImage;
+    boomleft13: TImage;
+    boomdown13: TImage;
+    boomright13: TImage;
+    boomu132: TImage;
+    boomr132: TImage;
+    boomd133: TImage;
+    boomr134: TImage;
+    boom14: TImage;
+    bomb23: TImage;
+    boomup15: TImage;
+    boomright15: TImage;
+    boomleft14: TImage;
+    boomdown15: TImage;
+    boomu133: TImage;
+    boomd131: TImage;
+    boomr131: TImage;
+    booml134: TImage;
+    bomb14: TImage;
+    boom23: TImage;
+    boomup23: TImage;
+    boomleft23: TImage;
+    boomright23: TImage;
+    boomd132: TImage;
+    boomr133: TImage;
+    boomd134: TImage;
+    booml133: TImage;
+    boom15: TImage;
+    bomb13: TImage;
+    boomup14: TImage;
+    boomright14: TImage;
+    boomleft15: TImage;
+    boomu134: TImage;
+    boomu131: TImage;
+    booml131: TImage;
+    booml132: TImage;
+    boomdown14: TImage;
+    boomdown23: TImage;
+    bombt13: TTimer;
+    bombb13: TTimer;
+    bombgo13: TTimer;
+    bombt14: TTimer;
+    bombb14: TTimer;
+    bombgo14: TTimer;
+    bombt15: TTimer;
+    bombb15: TTimer;
+    bombgo15: TTimer;
+    bombt23: TTimer;
+    bombb23: TTimer;
+    bombgo23: TTimer;
+    bombt24: TTimer;
+    bombb24: TTimer;
+    bombgo24: TTimer;
+    bombt25: TTimer;
+    bombb25: TTimer;
+    bombgo25: TTimer;
+    boomu232: TImage;
+    boomr231: TImage;
+    boomu231: TImage;
+    boomr233: TImage;
+    boomu234: TImage;
+    boomd234: TImage;
+    booml231: TImage;
+    booml154: TImage;
+    boomd232: TImage;
+    boomr234: TImage;
+    boomu233: TImage;
+    booml234: TImage;
+    boomd154: TImage;
+    boomd153: TImage;
+    booml151: TImage;
+    boomr232: TImage;
+    boomu152: TImage;
+    boomr151: TImage;
+    boomu151: TImage;
+    booml233: TImage;
+    boomu153: TImage;
+    boomd231: TImage;
+    boomr152: TImage;
+    booml153: TImage;
+    boomd233: TImage;
+    boomr154: TImage;
+    boomu154: TImage;
+    booml232: TImage;
+    boomd151: TImage;
+    boomd152: TImage;
+    booml152: TImage;
+    boomr153: TImage;
+    boomu142: TImage;
+    boomr142: TImage;
+    boomu141: TImage;
+    booml141: TImage;
+    boomu143: TImage;
+    boomd142: TImage;
+    boomr141: TImage;
+    booml142: TImage;
+    boomd141: TImage;
+    boomr144: TImage;
+    boomd143: TImage;
+    booml144: TImage;
+    boomu144: TImage;
+    boomd144: TImage;
+    booml143: TImage;
+    boomr143: TImage;
+    boomu243: TImage;
+    booml241: TImage;
+    boomu244: TImage;
+    booml243: TImage;
+    boomu241: TImage;
+    boomd241: TImage;
+    boomr244: TImage;
+    boomd244: TImage;
+    booml244: TImage;
+    boomu242: TImage;
+    boomr242: TImage;
+    booml242: TImage;
+    boomr243: TImage;
+    boomd242: TImage;
+    boomd243: TImage;
+    boomr241: TImage;
+    bomb24: TImage;
+    boom24: TImage;
+    boomup24: TImage;
+    boomleft24: TImage;
+    boomright24: TImage;
+    boomdown24: TImage;
+    bomb25: TImage;
+    boom25: TImage;
+    boomup25: TImage;
+    boomleft25: TImage;
+    boomright25: TImage;
+    boomdown25: TImage;
+    boomd251: TImage;
+    boomr251: TImage;
+    boomu254: TImage;
+    booml254: TImage;
+    boomd252: TImage;
+    boomu252: TImage;
+    boomr253: TImage;
+    boomd254: TImage;
+    booml253: TImage;
+    boomu253: TImage;
+    booml251: TImage;
+    boomr252: TImage;
+    booml252: TImage;
+    boomu251: TImage;
+    boomd253: TImage;
+    boomr254: TImage;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
+    procedure player1run1Timer(Sender: TObject);
+    procedure bombt1Timer(Sender: TObject);
+    procedure bombb1Timer(Sender: TObject);
+
+    procedure checkTimer(Sender: TObject);
+    procedure btnstartClick(Sender: TObject);
+    procedure player1run2Timer(Sender: TObject);
+    procedure deadTimer(Sender: TObject);
+    procedure bombc2Timer(Sender: TObject);
+    procedure bombc1Timer(Sender: TObject);
+    procedure player2run1Timer(Sender: TObject);
+    procedure player2run2Timer(Sender: TObject);
+    procedure bombt2Timer(Sender: TObject);
+    procedure bombb2Timer(Sender: TObject);
+    procedure dead2Timer(Sender: TObject);
+    procedure bombgo1Timer(Sender: TObject);
+    procedure bombgo2Timer(Sender: TObject);
+    procedure mnutTimer(Sender: TObject);
+    procedure timeTimer(Sender: TObject);
+    procedure bombt12Timer(Sender: TObject);
+    procedure bombb12Timer(Sender: TObject);
+    procedure bombgo12Timer(Sender: TObject);
+    procedure TimeendTimer(Sender: TObject);
+    procedure btnlearnClick(Sender: TObject);
+    procedure learn1Click(Sender: TObject);
+    procedure learn2Click(Sender: TObject);
+    procedure learn3Click(Sender: TObject);
+    procedure learn4Click(Sender: TObject);
+    procedure btntitreClick(Sender: TObject);
+    procedure TiterClick(Sender: TObject);
+    procedure btnoptionClick(Sender: TObject);
+    procedure exitClick(Sender: TObject);
+    procedure bombt22Timer(Sender: TObject);
+    procedure bombb22Timer(Sender: TObject);
+    procedure Image41Click(Sender: TObject);
+    procedure bombgo22Timer(Sender: TObject);
+    procedure bombt13Timer(Sender: TObject);
+    procedure bombt14Timer(Sender: TObject);
+    procedure bombt15Timer(Sender: TObject);
+    procedure bombb13Timer(Sender: TObject);
+    procedure bombb14Timer(Sender: TObject);
+    procedure bombb15Timer(Sender: TObject);
+    procedure bombgo13Timer(Sender: TObject);
+    procedure bombgo14Timer(Sender: TObject);
+    procedure bombgo15Timer(Sender: TObject);
+    procedure bombt23Timer(Sender: TObject);
+    procedure bombt24Timer(Sender: TObject);
+    procedure bombb23Timer(Sender: TObject);
+    procedure bombb24Timer(Sender: TObject);
+    procedure bombb25Timer(Sender: TObject);
+    procedure bombt25Timer(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Bomform: TBomform;
+  gr: array [1 .. 13] of array [1 .. 13] of integer;
+  gr1: array [1 .. 169] of integer;
+  gr2: array [1 .. 169] of integer;
+  bombgr: array [1 .. 10] of array [1 .. 2] of integer;
+  graund: array [0 .. 36] of integer;
+  bombpos: array [1 .. 10] of array [1 .. 2] of integer;
+  wasd, wasd2, bombwasd1, bombwasd2, bombwasd12, bombwasd13, bombwasd14,
+   bombwasd15, bombwasd22, bombwasd23, bombwasd24, bombwasd25: integer;
+  bonus_bomb1, bonus_bomb2, bonus_bombs1, bonus_bombs2: integer;
+  bonus_brun1, bonus_brun2, bonus_run1, bonus_run2: boolean;
+  cxe, cxe2, v, v2, bb1, bb2, bb12, bb13, bb14, bb15, bb22, bb23, bb24, bb25,
+   mnu, run1, run2, pllife1, pllife2: boolean;
+  int, int2, iend: integer;
+  blcheck, btcheck, learn: boolean;
+  y: trect;
+
+implementation
+
+{$R *.dfm}
+
+// процедура возврата
+procedure back(b: TImage);
+begin
+  b.Left := -700;
+  b.Top := -700;
+
+end;
+
+// процедура подстановки на то же места
+procedure join(b: TImage; B1: TImage);
+begin
+  b.Left := B1.Left;
+  b.Top := B1.Top;
+
+end;
+
+// заполнение массива блока
+procedure mass();
+var
+  i, I2: integer;
+begin
+
+  for i := 1 to 13 do
+    for I2 := 1 to 13 do
+      if ((i mod 2 = 0) and (I2 mod 2 = 0)) or ((i <> 1) and (I2 <> 1)) or
+        ((i <> 1) and (I2 <> 2)) or ((i <> 2) and (I2 <> 1)) or
+        ((i <> 12) and (I2 <> 13)) or ((i <> 13) and (I2 <> 13)) or
+        ((i <> 13) and (I2 <> 12)) then
+        if random(5) >= 1 then
+          gr[i][I2] := 1
+        else
+          gr[i][I2] := 0;
+  gr[1][1] := 0;
+  gr[12][13] := 0;
+  gr[1][2] := 0;
+  gr[13][13] := 0;
+  gr[2][1] := 0;
+  gr[13][12] := 0;
+end;
+
+// разблакировка мест
+procedure mussdown(i: integer);
+
+begin
+  gr1[i] := 0;
+  gr2[i] := 0;
+end;
+
+// кнопка обучение
+procedure TBomform.btnlearnClick(Sender: TObject);
+begin
+  learn1.Left := 0;
+  learn1.Top := 0;
+  learn := true;
+end;
+
+// кнопка настройки
+procedure TBomform.btnoptionClick(Sender: TObject);
+begin
+  showmessage('В разработке');
+end;
+
+// кнопка выхода
+procedure TBomform.exitClick(Sender: TObject);
+begin
+  Bomform.Close;
+end;
+
+// кнопка старта игры на 2
+procedure TBomform.btnstartClick(Sender: TObject);
+
+begin
+  mass();
+  mnu := false;
+  mnut.Enabled := false;
+  back(menu);
+  back(btnstart);
+  back(btnlearn);
+  back(btntitre);
+  back(btnoption);
+  back(exit);
+  pllife1 := true;
+  pllife2 := true;
+  dead12.Visible := false;
+  dead22.Visible := false;
+  Player1.Left := 40;
+  Player1.Top := 40;
+  player2.Left := 520;
+  player2.Top := 520;
+  int := 0;
+  int2 := 0;
+  bonus_bomb2 := 1;
+  bonus_bombs2 := 1;
+  bonus_run2 := false;
+  bonus_brun2 := false;
+  bonus_bomb1 := 1;
+  bonus_bombs1 := 1;
+  bonus_run1 := false;
+  bonus_brun1 := false;
+  Timeend.Enabled := false;
+  dead.Enabled := true;
+  dead2.Enabled := true;
+  check.Enabled := true;
+  Label7.caption := '0';
+  Label7.Left := 633;
+
+end;
+
+// кнопка титры
+procedure TBomform.btntitreClick(Sender: TObject);
+begin
+  Titer.Left := 0;
+  Titer.Top := 0;
+  learn := true;
+end;
+
+// блокировка мест прохода
+procedure mussup(i: integer; im: TImage);
+
+begin
+  gr1[i] := im.Left;
+  gr2[i] := im.Top;
+end;
+
+// покраска куба
+procedure blockc(i: integer; im: TImage; iml: TImageList);
+begin
+  iml.GetBitmap(i, im.Picture.Bitmap)
+end;
+
+// проверка квадратика на взрыв
+procedure bcheck(i: integer; I2: integer; im: TImage; im1: TImage; im2: TImage;
+  im3: TImage; im4: TImage; im5: TImage; im6: TImage; im7: TImage; im8: TImage;
+  im9: TImage; im10: TImage; im11: TImage; im12: TImage; im13: TImage;
+  im14: TImage; im15: TImage; im16: TImage; im17: TImage; im18: TImage;
+  im19: TImage; im20: TImage; im21: TImage; im22: TImage; im23: TImage;
+  im24: TImage; im25: TImage; im26: TImage; im27: TImage; im28: TImage;
+  im29: TImage; im30: TImage; im31: TImage; im32: TImage; im33: TImage;
+  im34: TImage; im35: TImage; im36: TImage; im37: TImage; im38: TImage;
+  im39: TImage; im40: TImage; player: TImage; player2: TImage;
+  iml1: TImageList);
+var
+  ic, lc, gc, vc: boolean;
+  rc: trect;
+begin
+
+  if random(5) + 1 = 1 then
+    ic := true
+  else
+    ic := false;
+  if (random(20) + 1 = 1) and (ic = true) then
+  begin
+    ic := false;
+    lc := true;
+  end
+  else
+    lc := false;
+  if (random(2) = 1) and (lc = true) then
+    gc := true
+  else
+    gc := false;
+  if (random(3) + 1 = 3) and (ic = true) then
+  begin
+    ic := false;
+    vc := true;
+  end
+  else
+    vc := false;
+
+  if (intersectrect(rc, im.BoundsRect, im1.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im2.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im3.BoundsRect) or intersectrect(rc, im.BoundsRect, im4.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im5.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im6.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im7.BoundsRect) or intersectrect(rc, im.BoundsRect, im8.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im9.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im10.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im11.BoundsRect) or intersectrect(rc, im.BoundsRect, im12.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im13.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im14.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im15.BoundsRect) or intersectrect(rc, im.BoundsRect, im16.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im17.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im18.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im19.BoundsRect) or intersectrect(rc, im.BoundsRect, im20.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im21.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im22.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im23.BoundsRect) or intersectrect(rc, im.BoundsRect, im24.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im25.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im26.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im27.BoundsRect) or intersectrect(rc, im.BoundsRect, im28.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im29.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im30.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im31.BoundsRect) or intersectrect(rc, im.BoundsRect, im32.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im33.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im34.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im35.BoundsRect) or intersectrect(rc, im.BoundsRect, im36.BoundsRect) or
+    intersectrect(rc, im.BoundsRect, im37.BoundsRect) or intersectrect(rc,
+    im.BoundsRect, im38.BoundsRect) or intersectrect(rc, im.BoundsRect,
+    im39.BoundsRect) or intersectrect(rc, im.BoundsRect, im40.BoundsRect)) and
+    (gr[i][I2] = 1) then
+    if ic = true then
+      gr[i][I2] := 2
+    else if (gc = true) and (lc = true) then
+      gr[i][I2] := 3
+    else if (gc = false) and (lc = true) then
+      gr[i][I2] := 4
+    else if (vc = true) then
+      gr[i][I2] := 5
+    else
+      gr[i][I2] := 0;
+
+  if intersectrect(rc, im.BoundsRect, player.BoundsRect) and (gr[i][I2] = 2)
+  then
+  begin
+    if bonus_bomb1 < 5 then
+      bonus_bomb1 := bonus_bomb1 + 1;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player.BoundsRect) and (gr[i][I2] = 3)
+  then
+  begin
+    if bonus_brun1 = false then
+      bonus_brun1 := true;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player.BoundsRect) and (gr[i][I2] = 4)
+  then
+  begin
+    if bonus_run1 = false then
+      bonus_run1 := true;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player.BoundsRect) and (gr[i][I2] = 5)
+  then
+  begin
+    if (bonus_bombs1 < 5) then
+      bonus_bombs1 := bonus_bombs1 + 1;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player.BoundsRect) and (gr[i][I2] = 6)
+  then
+  begin
+    pllife1 := false;
+
+  end;
+
+  if intersectrect(rc, im.BoundsRect, player2.BoundsRect) and (gr[i][I2] = 2)
+  then
+  begin
+    if bonus_bomb2 < 5 then
+      bonus_bomb2 := bonus_bomb2 + 1;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player2.BoundsRect) and
+    (gr[i][I2] = 3) then
+  begin
+    if bonus_brun2 = false then
+      bonus_brun2 := true;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player2.BoundsRect) and
+    (gr[i][I2] = 4) then
+  begin
+    if bonus_run2 = false then
+      bonus_run2 := true;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player2.BoundsRect) and
+    (gr[i][I2] = 5) then
+  begin
+    if (bonus_bombs2 < 5) then
+      bonus_bombs2 := bonus_bombs2 + 1;
+    blockc(0, im, iml1);
+    gr[i][I2] := 0;
+  end
+  else if intersectrect(rc, im.BoundsRect, player2.BoundsRect) and
+    (gr[i][I2] = 6) then
+  begin
+    pllife2 := false;
+
+  end;
+
+end;
+
+// проверка квадратика на состояние
+procedure bcheck2(i: integer; I2: integer; im: TImage; iml1: TImageList);
+var
+  c: integer;
+  g: char;
+begin
+  g := im.Name[1];
+  case g of
+    'a', 'A':
+      c := strtoint(im.Name[2] + im.Name[3]);
+    'b', 'B':
+      c := 13 + strtoint(im.Name[2] + im.Name[3]);
+    'c', 'C':
+      c := 26 + strtoint(im.Name[2] + im.Name[3]);
+    'd', 'D':
+      c := 39 + strtoint(im.Name[2] + im.Name[3]);
+    'e', 'E':
+      c := 52 + strtoint(im.Name[2] + im.Name[3]);
+    'f', 'F':
+      c := 65 + strtoint(im.Name[2] + im.Name[3]);
+    'g', 'G':
+      c := 78 + strtoint(im.Name[2] + im.Name[3]);
+    'h', 'H':
+      c := 91 + strtoint(im.Name[2] + im.Name[3]);
+    'i', 'I':
+      c := 104 + strtoint(im.Name[2] + im.Name[3]);
+    'j', 'J':
+      c := 117 + strtoint(im.Name[2] + im.Name[3]);
+    'k', 'K':
+      c := 130 + strtoint(im.Name[2] + im.Name[3]);
+    'l', 'L':
+      c := 143 + strtoint(im.Name[2] + im.Name[3]);
+    'm', 'M':
+      c := 156 + strtoint(im.Name[2] + im.Name[3]);
+  end;
+
+  if gr[i][I2] = 6 then
+  begin
+    blockc(6, im, iml1);
+    mussup(c, im);
+  end
+  else if gr[i][I2] = 5 then
+  begin
+    blockc(5, im, iml1);
+    mussdown(c);
+  end
+  else if gr[i][I2] = 4 then
+  begin
+    blockc(4, im, iml1);
+    mussdown(c);
+  end
+  else if gr[i][I2] = 3 then
+  begin
+    blockc(3, im, iml1);
+    mussdown(c);
+  end
+  else if gr[i][I2] = 2 then
+  begin
+    blockc(2, im, iml1);
+    mussdown(c);
+  end
+  else if gr[i][I2] = 1 then
+  begin
+    blockc(1, im, iml1);
+    mussup(c, im);
+  end
+  else
+  begin
+    blockc(0, im, iml1);
+    mussdown(c);
+  end;
+
+end;
+
+// отправка  квадратика на проверку состояние
+procedure TBomform.bombc1Timer(Sender: TObject);
+begin
+  bcheck2(1, 1, A1, block);
+  bcheck2(1, 2, A2, block);
+  bcheck2(1, 3, A3, block);
+  bcheck2(1, 4, A4, block);
+  bcheck2(1, 5, A5, block);
+  bcheck2(1, 6, A6, block);
+  bcheck2(1, 7, A7, block);
+  bcheck2(1, 8, A8, block);
+  bcheck2(1, 9, A9, block);
+  bcheck2(1, 10, A10, block);
+  bcheck2(1, 11, A11, block);
+  bcheck2(1, 12, A12, block);
+  bcheck2(1, 13, A13, block);
+
+  bcheck2(2, 1, B1, block);
+  bcheck2(2, 3, B3, block);
+  bcheck2(2, 5, B5, block);
+  bcheck2(2, 7, B7, block);
+  bcheck2(2, 9, B9, block);
+  bcheck2(2, 11, B11, block);
+  bcheck2(2, 13, B13, block);
+
+  bcheck2(3, 1, C1, block);
+  bcheck2(3, 2, C2, block);
+  bcheck2(3, 3, C3, block);
+  bcheck2(3, 4, C4, block);
+  bcheck2(3, 5, C5, block);
+  bcheck2(3, 6, C6, block);
+  bcheck2(3, 7, C7, block);
+  bcheck2(3, 8, C8, block);
+  bcheck2(3, 9, C9, block);
+  bcheck2(3, 10, C10, block);
+  bcheck2(3, 11, C11, block);
+  bcheck2(3, 12, C12, block);
+  bcheck2(3, 13, C13, block);
+
+  bcheck2(4, 1, D1, block);
+  bcheck2(4, 3, D3, block);
+  bcheck2(4, 5, D5, block);
+  bcheck2(4, 7, D7, block);
+  bcheck2(4, 9, D9, block);
+  bcheck2(4, 11, D11, block);
+  bcheck2(4, 13, D13, block);
+
+  bcheck2(5, 1, E1, block);
+  bcheck2(5, 2, E2, block);
+  bcheck2(5, 3, E3, block);
+  bcheck2(5, 4, E4, block);
+  bcheck2(5, 5, E5, block);
+  bcheck2(5, 6, E6, block);
+  bcheck2(5, 7, E7, block);
+  bcheck2(5, 8, E8, block);
+  bcheck2(5, 9, E9, block);
+  bcheck2(5, 10, E10, block);
+  bcheck2(5, 11, E11, block);
+  bcheck2(5, 12, E12, block);
+  bcheck2(5, 13, E13, block);
+
+  bcheck2(6, 1, F1, block);
+  bcheck2(6, 3, F3, block);
+  bcheck2(6, 5, F5, block);
+  bcheck2(6, 7, F7, block);
+  bcheck2(6, 9, F9, block);
+  bcheck2(6, 11, F11, block);
+  bcheck2(6, 13, F13, block);
+
+  bcheck2(7, 1, G1, block);
+  bcheck2(7, 2, G2, block);
+  bcheck2(7, 3, G3, block);
+  bcheck2(7, 4, G4, block);
+  bcheck2(7, 5, G5, block);
+  bcheck2(7, 6, G6, block);
+  bcheck2(7, 7, G7, block);
+  bcheck2(7, 8, G8, block);
+  bcheck2(7, 9, G9, block);
+  bcheck2(7, 10, G10, block);
+  bcheck2(7, 11, G11, block);
+  bcheck2(7, 12, G12, block);
+  bcheck2(7, 13, G13, block);
+
+  bcheck2(8, 1, H1, block);
+  bcheck2(8, 3, H3, block);
+  bcheck2(8, 5, H5, block);
+  bcheck2(8, 7, H7, block);
+  bcheck2(8, 9, H9, block);
+  bcheck2(8, 11, H11, block);
+  bcheck2(8, 13, H13, block);
+
+  bcheck2(9, 1, I1, block);
+  bcheck2(9, 2, I2, block);
+  bcheck2(9, 3, I3, block);
+  bcheck2(9, 4, I4, block);
+  bcheck2(9, 5, I5, block);
+  bcheck2(9, 6, I6, block);
+  bcheck2(9, 7, I7, block);
+  bcheck2(9, 8, I8, block);
+  bcheck2(9, 9, I9, block);
+  bcheck2(9, 10, I10, block);
+  bcheck2(9, 11, I11, block);
+  bcheck2(9, 12, I12, block);
+  bcheck2(9, 13, I13, block);
+
+  bcheck2(10, 1, J1, block);
+  bcheck2(10, 3, J3, block);
+  bcheck2(10, 5, J5, block);
+  bcheck2(10, 7, J7, block);
+  bcheck2(10, 9, J9, block);
+  bcheck2(10, 11, J11, block);
+  bcheck2(10, 13, J13, block);
+
+  bcheck2(11, 1, K1, block);
+  bcheck2(11, 2, K2, block);
+  bcheck2(11, 3, K3, block);
+  bcheck2(11, 4, K4, block);
+  bcheck2(11, 5, K5, block);
+  bcheck2(11, 6, K6, block);
+  bcheck2(11, 7, K7, block);
+  bcheck2(11, 8, K8, block);
+  bcheck2(11, 9, K9, block);
+  bcheck2(11, 10, K10, block);
+  bcheck2(11, 11, K11, block);
+  bcheck2(11, 12, K12, block);
+  bcheck2(11, 13, K13, block);
+
+  bcheck2(12, 1, L1, block);
+  bcheck2(12, 3, L3, block);
+  bcheck2(12, 5, L5, block);
+  bcheck2(12, 7, L7, block);
+  bcheck2(12, 9, L9, block);
+  bcheck2(12, 11, L11, block);
+  bcheck2(12, 13, L13, block);
+
+  bcheck2(13, 1, M1, block);
+  bcheck2(13, 2, M2, block);
+  bcheck2(13, 3, M3, block);
+  bcheck2(13, 4, M4, block);
+  bcheck2(13, 5, M5, block);
+  bcheck2(13, 6, M6, block);
+  bcheck2(13, 7, M7, block);
+  bcheck2(13, 8, M8, block);
+  bcheck2(13, 9, M9, block);
+  bcheck2(13, 10, M10, block);
+  bcheck2(13, 11, M11, block);
+  bcheck2(13, 12, M12, block);
+  bcheck2(13, 13, M13, block);
+
+end;
+
+// отправка  квадратика на проверку взрыв
+procedure TBomform.bombc2Timer(Sender: TObject);
+begin
+  bcheck(1, 1, A1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // A
+  bcheck(1, 2, A2, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 3, A3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 4, A4, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 5, A5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 6, A6, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 7, A7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 8, A8, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 9, A9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(1, 10, A10, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(1, 11, A11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(1, 12, A12, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(1, 13, A13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(2, 1, B1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // B
+  bcheck(2, 3, B3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(2, 5, B5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(2, 7, B7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(2, 9, B9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(2, 11, B11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomleft12, boomright12, boomup12, boomdown12,
+    boomdown2, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(2, 13, B13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomleft12, boomright12, boomup12, boomdown12,
+    boomdown2, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(3, 1, C1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // C
+  bcheck(3, 2, C2, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 3, C3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 4, C4, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 5, C5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 6, C6, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 7, C7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 8, C8, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 9, C9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(3, 10, C10, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(3, 11, C11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(3, 12, C12, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(3, 13, C13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(4, 1, D1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // D
+  bcheck(4, 3, D3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(4, 5, D5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(4, 7, D7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(4, 9, D9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(4, 11, D11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(4, 13, D13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(5, 1, E1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // E
+  bcheck(5, 2, E2, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 3, E3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 4, E4, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 5, E5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 6, E6, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 7, E7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 8, E8, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 9, E9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(5, 10, E10, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(5, 11, E11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(5, 12, E12, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(5, 13, E13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(6, 1, F1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // F
+  bcheck(6, 3, F3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(6, 5, F5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(6, 7, F7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(6, 9, F9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(6, 11, F11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(6, 13, F13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(7, 1, G1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // G
+  bcheck(7, 2, G2, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 3, G3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 4, G4, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 5, G5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 6, G6, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 7, G7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 8, G8, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 9, G9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(7, 10, G10, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(7, 11, G11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(7, 12, G12, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(7, 13, G13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(8, 1, H1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // H
+  bcheck(8, 3, H3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(8, 5, H5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(8, 7, H7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(8, 9, H9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(8, 11, H11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(8, 13, H13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(9, 1, I1, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  // I
+  bcheck(9, 2, I2, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 3, I3, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 4, I4, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 5, I5, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 6, I6, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 7, I7, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 8, I8, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 9, I9, boomleft, boomright, boomup, boomdown, boomleft2, boomright2,
+    boomup2, boomdown2, boomleft12, boomright12, boomup12, boomdown12,
+    boomleft22, boomright22, boomup22, boomdown22, boomleft23, boomright23,
+    boomup23, boomdown23, boomleft13, boomright13, boomup13, boomdown13,
+    boomleft24, boomright24, boomup24, boomdown24, boomleft25, boomright25,
+    boomup25, boomdown25, boomleft14, boomright14, boomup14, boomdown14,
+    boomleft15, boomright15, boomup15, boomdown15, Player1, player2, block);
+  bcheck(9, 10, I10, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(9, 11, I11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(9, 12, I12, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(9, 13, I13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(10, 1, J1, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1, player2,
+    block); // J
+  bcheck(10, 3, J3, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(10, 5, J5, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(10, 7, J7, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(10, 9, J9, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(10, 11, J11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(10, 13, J13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(11, 1, K1, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1, player2,
+    block); // K
+  bcheck(11, 2, K2, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 3, K3, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 4, K4, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 5, K5, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 6, K6, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 7, K7, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 8, K8, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 9, K9, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 10, K10, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 11, K11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 12, K12, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(11, 13, K13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(12, 1, L1, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1, player2,
+    block); // L
+  bcheck(12, 3, L3, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(12, 5, L5, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(12, 7, L7, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(12, 9, L9, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(12, 11, L11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(12, 13, L13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+
+  bcheck(13, 1, M1, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1, player2,
+    block); // M
+  bcheck(13, 2, M2, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 3, M3, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 4, M4, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 5, M5, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 6, M6, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 7, M7, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 8, M8, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 9, M9, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 10, M10, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 11, M11, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 12, M12, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+  bcheck(13, 13, M13, boomleft, boomright, boomup, boomdown, boomleft2,
+    boomright2, boomup2, boomdown2, boomleft12, boomright12, boomup12,
+    boomdown12, boomleft22, boomright22, boomup22, boomdown22, boomleft23,
+    boomright23, boomup23, boomdown23, boomleft13, boomright13, boomup13,
+    boomdown13, boomleft24, boomright24, boomup24, boomdown24, boomleft25,
+    boomright25, boomup25, boomdown25, boomleft14, boomright14, boomup14,
+    boomdown14, boomleft15, boomright15, boomup15, boomdown15, Player1,
+    player2, block);
+end;
+
+// пинок бомбы 12
+procedure TBomform.bombgo12Timer(Sender: TObject);
+
+var
+  i, I2: integer;
+  g: boolean;
+begin
+  g := false;
+
+  case bombwasd12 of
+    1:
+      begin // левый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb12.Left + 40) and (gr2[i] = bomb12.Top)) or
+            ((bombgr[i][1] = bomb12.Left + 40) and (bombgr[i][2] = bomb12.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[2][1] + 120) <> bomb12.Left) and
+          (bomb12.Left < 520) then
+        begin
+          bomb12.Left := bomb12.Left + 20;
+
+        end
+        else
+        begin
+          bombwasd12 := 0;
+          bombgo12.Enabled := false;
+        end;
+      end;
+    2:
+      begin // нижний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb12.Left) and (gr2[i] = bomb12.Top - 40)) or
+            ((bombgr[i][1] = bomb12.Left) and (bombgr[i][2] = bomb12.Top - 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[2][2] - 120) <> bomb12.Top) and
+          (bomb12.Top > 40) then
+        begin
+          bomb12.Top := bomb12.Top - 20;
+
+        end
+        else
+        begin
+          bombwasd12 := 0;
+          bombgo12.Enabled := false;
+        end;
+      end;
+    3:
+      begin // верхний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb12.Left) and (gr2[i] = bomb12.Top + 40)) or
+            ((bombgr[i][1] = bomb12.Left) and (bombgr[i][2] = bomb12.Top + 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[2][2] + 120) <> bomb12.Top) and
+          (bomb12.Top < 520) then
+        begin
+          bomb12.Top := bomb12.Top + 20;
+
+        end
+        else
+        begin
+          bombwasd12 := 0;
+          bombgo12.Enabled := false;
+        end;
+      end;
+    4:
+      begin // правый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb12.Left - 40) and (gr2[i] = bomb12.Top)) or
+            ((bombgr[i][1] = bomb12.Left - 40) and (bombgr[i][2] = bomb12.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[2][1] - 120) <> bomb12.Left) and
+          (bomb12.Left > 40) then
+        begin
+          bomb12.Left := bomb12.Left - 20;
+
+        end
+        else
+        begin
+          bombwasd12 := 0;
+          bombgo12.Enabled := false;
+        end;
+      end;
+
+  end;
+  bombgr[2][1] := bomb12.Left;
+  bombgr[2][2] := bomb12.Top;
+
+end;
+
+// пинок бомбы 13
+procedure TBomform.bombgo13Timer(Sender: TObject);
+var
+  i, I2: integer;
+  g: boolean;
+begin
+  g := false;
+
+  case bombwasd13 of
+    1:
+      begin // левый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb13.Left + 40) and (gr2[i] = bomb13.Top)) or
+            ((bombgr[i][1] = bomb13.Left + 40) and (bombgr[i][2] = bomb13.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[3][1] + 120) <> bomb13.Left) and
+          (bomb13.Left < 520) then
+        begin
+          bomb13.Left := bomb13.Left + 20;
+
+        end
+        else
+        begin
+          bombwasd13 := 0;
+          bombgo13.Enabled := false;
+        end;
+      end;
+    2:
+      begin // нижний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb13.Left) and (gr2[i] = bomb13.Top - 40)) or
+            ((bombgr[i][1] = bomb13.Left) and (bombgr[i][2] = bomb13.Top - 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[3][2] - 120) <> bomb13.Top) and
+          (bomb13.Top > 40) then
+        begin
+          bomb13.Top := bomb13.Top - 20;
+
+        end
+        else
+        begin
+          bombwasd13 := 0;
+          bombgo13.Enabled := false;
+        end;
+      end;
+    3:
+      begin // верхний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb13.Left) and (gr2[i] = bomb13.Top + 40)) or
+            ((bombgr[i][1] = bomb13.Left) and (bombgr[i][2] = bomb13.Top + 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[3][2] + 120) <> bomb13.Top) and
+          (bomb13.Top < 520) then
+        begin
+          bomb13.Top := bomb13.Top + 20;
+
+        end
+        else
+        begin
+          bombwasd13 := 0;
+          bombgo13.Enabled := false;
+        end;
+      end;
+    4:
+      begin // правый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb13.Left - 40) and (gr2[i] = bomb13.Top)) or
+            ((bombgr[i][1] = bomb13.Left - 40) and (bombgr[i][2] = bomb13.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[3][1] - 120) <> bomb13.Left) and
+          (bomb13.Left > 40) then
+        begin
+          bomb13.Left := bomb13.Left - 20;
+
+        end
+        else
+        begin
+          bombwasd13 := 0;
+          bombgo13.Enabled := false;
+        end;
+      end;
+
+  end;
+  bombgr[3][1] := bomb13.Left;
+  bombgr[3][2] := bomb13.Top;
+
+end;
+
+// пинок бомбы 14
+procedure TBomform.bombgo14Timer(Sender: TObject);
+var
+  i, I2: integer;
+  g: boolean;
+begin
+  g := false;
+
+  case bombwasd14 of
+    1:
+      begin // левый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb14.Left + 40) and (gr2[i] = bomb14.Top)) or
+            ((bombgr[i][1] = bomb14.Left + 40) and (bombgr[i][2] = bomb14.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[4][1] + 120) <> bomb14.Left) and
+          (bomb14.Left < 520) then
+        begin
+          bomb14.Left := bomb14.Left + 20;
+
+        end
+        else
+        begin
+          bombwasd14 := 0;
+          bombgo14.Enabled := false;
+        end;
+      end;
+    2:
+      begin // нижний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb14.Left) and (gr2[i] = bomb14.Top - 40)) or
+            ((bombgr[i][1] = bomb14.Left) and (bombgr[i][2] = bomb14.Top - 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[4][2] - 120) <> bomb14.Top) and
+          (bomb14.Top > 40) then
+        begin
+          bomb14.Top := bomb14.Top - 20;
+
+        end
+        else
+        begin
+          bombwasd14 := 0;
+          bombgo14.Enabled := false;
+        end;
+      end;
+    3:
+      begin // верхний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb14.Left) and (gr2[i] = bomb14.Top + 40)) or
+            ((bombgr[i][1] = bomb14.Left) and (bombgr[i][2] = bomb14.Top + 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[4][2] + 120) <> bomb14.Top) and
+          (bomb14.Top < 520) then
+        begin
+          bomb14.Top := bomb14.Top + 20;
+
+        end
+        else
+        begin
+          bombwasd14 := 0;
+          bombgo14.Enabled := false;
+        end;
+      end;
+    4:
+      begin // правый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb14.Left - 40) and (gr2[i] = bomb14.Top)) or
+            ((bombgr[i][1] = bomb14.Left - 40) and (bombgr[i][2] = bomb14.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[4][1] - 120) <> bomb14.Left) and
+          (bomb14.Left > 40) then
+        begin
+          bomb14.Left := bomb14.Left - 20;
+
+        end
+        else
+        begin
+          bombwasd14 := 0;
+          bombgo14.Enabled := false;
+        end;
+      end;
+
+  end;
+  bombgr[4][1] := bomb14.Left;
+  bombgr[4][2] := bomb14.Top;
+
+end;
+
+// пинок бомбы 15
+procedure TBomform.bombgo15Timer(Sender: TObject);
+var
+  i, I2: integer;
+  g: boolean;
+begin
+  g := false;
+
+  case bombwasd15 of
+    1:
+      begin // левый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb15.Left + 40) and (gr2[i] = bomb15.Top)) or
+            ((bombgr[i][1] = bomb15.Left + 40) and (bombgr[i][2] = bomb15.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[5][1] + 120) <> bomb15.Left) and
+          (bomb15.Left < 520) then
+        begin
+          bomb15.Left := bomb15.Left + 20;
+
+        end
+        else
+        begin
+          bombwasd15 := 0;
+          bombgo15.Enabled := false;
+        end;
+      end;
+    2:
+      begin // нижний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb15.Left) and (gr2[i] = bomb15.Top - 40)) or
+            ((bombgr[i][1] = bomb15.Left) and (bombgr[i][2] = bomb15.Top - 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[5][2] - 120) <> bomb15.Top) and
+          (bomb15.Top > 40) then
+        begin
+          bomb15.Top := bomb15.Top - 20;
+
+        end
+        else
+        begin
+          bombwasd15 := 0;
+          bombgo15.Enabled := false;
+        end;
+      end;
+    3:
+      begin // верхний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb15.Left) and (gr2[i] = bomb15.Top + 40)) or
+            ((bombgr[i][1] = bomb15.Left) and (bombgr[i][2] = bomb15.Top + 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[5][2] + 120) <> bomb15.Top) and
+          (bomb15.Top < 520) then
+        begin
+          bomb15.Top := bomb15.Top + 20;
+
+        end
+        else
+        begin
+          bombwasd15 := 0;
+          bombgo15.Enabled := false;
+        end;
+      end;
+    4:
+      begin // правый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb15.Left - 40) and (gr2[i] = bomb15.Top)) or
+            ((bombgr[i][1] = bomb15.Left - 40) and (bombgr[i][2] = bomb15.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[5][1] - 120) <> bomb15.Left) and
+          (bomb15.Left > 40) then
+        begin
+          bomb15.Left := bomb15.Left - 20;
+
+        end
+        else
+        begin
+          bombwasd15 := 0;
+          bombgo15.Enabled := false;
+        end;
+      end;
+
+  end;
+  bombgr[5][1] := bomb15.Left;
+  bombgr[5][2] := bomb15.Top;
+
+end;
+
+// пинок бомбы 1
+procedure TBomform.bombgo1Timer(Sender: TObject);
+var
+  i, I2: integer;
+  g: boolean;
+begin
+  g := false;
+
+  case bombwasd1 of
+    1:
+      begin // левый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb1.Left + 40) and (gr2[i] = bomb1.Top)) or
+            ((bombgr[i][1] = bomb1.Left + 40) and (bombgr[i][2] = bomb1.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[1][1] + 120) <> bomb1.Left) and
+          (bomb1.Left < 520) then
+        begin
+          bomb1.Left := bomb1.Left + 20;
+
+        end
+        else
+        begin
+          bombwasd1 := 0;
+          bombgo1.Enabled := false;
+        end;
+      end;
+    2:
+      begin // нижний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb1.Left) and (gr2[i] = bomb1.Top - 40)) or
+            ((bombgr[i][1] = bomb1.Left) and (bombgr[i][2] = bomb1.Top - 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[1][2] - 120) <> bomb1.Top) and
+          (bomb1.Top > 40) then
+        begin
+          bomb1.Top := bomb1.Top - 20;
+
+        end
+        else
+        begin
+          bombwasd1 := 0;
+          bombgo1.Enabled := false;
+        end;
+      end;
+    3:
+      begin // верхний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb1.Left) and (gr2[i] = bomb1.Top + 40)) or
+            ((bombgr[i][1] = bomb1.Left) and (bombgr[i][2] = bomb1.Top + 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[1][2] + 120) <> bomb1.Top) and
+          (bomb1.Top < 520) then
+        begin
+          bomb1.Top := bomb1.Top + 20;
+
+        end
+        else
+        begin
+          bombwasd1 := 0;
+          bombgo1.Enabled := false;
+        end;
+      end;
+    4:
+      begin // правый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb1.Left - 40) and (gr2[i] = bomb1.Top)) or
+            ((bombgr[i][1] = bomb1.Left - 40) and (bombgr[i][2] = bomb1.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[1][1] - 120) <> bomb1.Left) and
+          (bomb1.Left > 40) then
+        begin
+          bomb1.Left := bomb1.Left - 20;
+
+        end
+        else
+        begin
+          bombwasd1 := 0;
+          bombgo1.Enabled := false;
+        end;
+      end;
+
+  end;
+  bombgr[1][1] := bomb1.Left;
+  bombgr[1][2] := bomb1.Top;
+
+end;
+
+// пинок бомбы 22
+procedure TBomform.bombgo22Timer(Sender: TObject);
+var
+  i, I2: integer;
+  g: boolean;
+begin
+  g := false;
+
+  case bombwasd22 of
+    1:
+      begin // левый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb22.Left + 40) and (gr2[i] = bomb22.Top)) or
+            ((bombgr[i][1] = bomb22.Left + 40) and (bombgr[i][2] = bomb22.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[7][1] + 120) <> bomb22.Left) and
+          (bomb22.Left < 520) then
+        begin
+          bomb22.Left := bomb22.Left + 20;
+
+        end
+        else
+        begin
+          bombwasd22 := 0;
+          bombgo22.Enabled := false;
+        end;
+      end;
+    2:
+      begin // нижний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb22.Left) and (gr2[i] = bomb22.Top - 40)) or
+            ((bombgr[i][1] = bomb22.Left) and (bombgr[i][2] = bomb22.Top - 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[7][2] - 120) <> bomb22.Top) and
+          (bomb22.Top > 40) then
+        begin
+          bomb22.Top := bomb22.Top - 20;
+
+        end
+        else
+        begin
+          bombwasd22 := 0;
+          bombgo22.Enabled := false;
+        end;
+      end;
+    3:
+      begin // верхний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb22.Left) and (gr2[i] = bomb22.Top + 40)) or
+            ((bombgr[i][1] = bomb22.Left) and (bombgr[i][2] = bomb22.Top + 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[7][2] + 120) <> bomb22.Top) and
+          (bomb22.Top < 520) then
+        begin
+          bomb22.Top := bomb22.Top + 20;
+
+        end
+        else
+        begin
+          bombwasd22 := 0;
+          bombgo22.Enabled := false;
+        end;
+      end;
+    4:
+      begin // правый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb22.Left - 40) and (gr2[i] = bomb22.Top)) or
+            ((bombgr[i][1] = bomb22.Left - 40) and (bombgr[i][2] = bomb22.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[7][1] - 120) <> bomb22.Left) and
+          (bomb22.Left > 40) then
+        begin
+          bomb22.Left := bomb22.Left - 20;
+
+        end
+        else
+        begin
+          bombwasd22 := 0;
+          bombgo22.Enabled := false;
+        end;
+      end;
+
+  end;
+  bombgr[7][1] := bomb22.Left;
+  bombgr[7][2] := bomb22.Top;
+
+end;
+
+// пинок бомбы 2
+procedure TBomform.bombgo2Timer(Sender: TObject);
+var
+  i, I2: integer;
+  g: boolean;
+begin
+  g := false;
+
+  case bombwasd2 of
+    1:
+      begin // левый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb2.Left + 40) and (gr2[i] = bomb2.Top)) or
+            ((bombgr[i][1] = bomb2.Left + 40) and (bombgr[i][2] = bomb2.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[6][1] + 120) <> bomb2.Left) and
+          (bomb2.Left < 520) then
+        begin
+          bomb2.Left := bomb2.Left + 20;
+
+        end
+        else
+        begin
+          bombwasd2 := 0;
+          bombgo2.Enabled := false;
+        end;
+      end;
+    2:
+      begin // нижний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb2.Left) and (gr2[i] = bomb2.Top - 40)) or
+            ((bombgr[i][1] = bomb2.Left) and (bombgr[i][2] = bomb2.Top - 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[6][2] - 120) <> bomb2.Top) and
+          (bomb2.Top > 40) then
+        begin
+          bomb2.Top := bomb2.Top - 20;
+
+        end
+        else
+        begin
+          bombwasd2 := 0;
+          bombgo2.Enabled := false;
+        end;
+      end;
+    3:
+      begin // верхний
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb2.Left) and (gr2[i] = bomb2.Top + 40)) or
+            ((bombgr[i][1] = bomb2.Left) and (bombgr[i][2] = bomb2.Top + 40))
+          then
+            g := true;
+        if (g = false) and ((bombpos[6][2] + 120) <> bomb2.Top) and
+          (bomb2.Top < 520) then
+        begin
+          bomb2.Top := bomb2.Top + 20;
+
+        end
+        else
+        begin
+          bombwasd2 := 0;
+          bombgo2.Enabled := false;
+        end;
+      end;
+    4:
+      begin // правый
+        for i := 1 to 169 do
+          if ((gr1[i] = bomb2.Left - 40) and (gr2[i] = bomb2.Top)) or
+            ((bombgr[i][1] = bomb2.Left - 40) and (bombgr[i][2] = bomb2.Top))
+          then
+            g := true;
+        if (g = false) and ((bombpos[6][1] - 120) <> bomb2.Left) and
+          (bomb2.Left > 40) then
+        begin
+          bomb2.Left := bomb2.Left - 20;
+
+        end
+        else
+        begin
+          bombwasd2 := 0;
+          bombgo2.Enabled := false;
+        end;
+      end;
+
+  end;
+  bombgr[6][1] := bomb2.Left;
+  bombgr[6][2] := bomb2.Top;
+
+end;
+
+// таймер проверки на взрыв
+procedure TBomform.checkTimer(Sender: TObject);
+var
+  r: trect;
+begin
+  menu.Left := 0;
+  menu.Top := 0;
+  back(menu);
+
+  if (intersectrect(r, Player1.BoundsRect, boom1.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu1.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd1.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr1.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml1.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu3.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd3.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr3.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml3.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu4.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd4.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr4.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml4.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown2.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu21.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd21.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr21.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml21.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu24.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd24.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr24.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml24.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom12.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup12.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft12.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright12.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown12.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu121.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd121.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr121.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml121.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu122.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd122.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr122.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml122.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu123.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd123.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr123.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml123.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu124.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd124.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr124.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml124.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom13.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup13.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft13.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright13.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu131.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd131.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr131.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml131.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu132.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd132.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr132.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml132.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu133.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd133.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr133.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml133.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu134.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd134.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr134.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml134.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom14.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup14.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft14.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright14.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown14.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu141.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd141.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr141.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml141.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu142.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd142.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr142.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml142.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu143.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd143.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr143.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml143.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu144.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd144.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr144.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml144.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom15.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup15.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft15.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright15.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown15.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu151.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd151.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr151.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml151.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu152.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd152.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr152.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml152.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu153.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd153.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr153.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml153.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu154.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd154.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr154.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml154.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown22.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu221.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd221.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr221.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml221.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu222.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd222.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr222.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml222.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu223.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd223.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr223.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml223.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu224.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd224.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr224.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml224.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown23.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu231.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd231.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr231.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml231.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu232.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd232.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr232.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml232.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu233.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd233.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr233.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml233.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu234.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd234.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr234.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml234.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boom25.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomup25.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomleft25.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomright25.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomdown25.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu251.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd251.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr251.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml251.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu252.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd252.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr252.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml252.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu253.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd253.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr253.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml253.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomu254.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomd254.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, boomr254.BoundsRect) or intersectrect(r,
+    Player1.BoundsRect, booml254.BoundsRect)) And (pllife1 = true) then
+  begin
+    pllife1 := false;
+    dead12.Visible := true;
+    dead.Enabled := true;
+  end;
+
+  if (intersectrect(r, Player2.BoundsRect, boom1.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu1.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd1.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr1.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml1.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu3.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd3.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr3.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml3.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu4.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd4.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr4.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml4.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown2.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu21.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd21.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr21.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml21.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu24.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd24.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr24.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml24.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom12.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup12.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft12.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright12.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown12.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu121.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd121.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr121.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml121.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu122.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd122.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr122.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml122.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu123.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd123.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr123.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml123.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu124.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd124.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr124.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml124.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom13.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup13.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft13.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright13.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu131.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd131.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr131.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml131.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu132.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd132.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr132.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml132.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu133.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd133.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr133.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml133.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu134.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd134.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr134.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml134.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom14.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup14.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft14.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright14.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown14.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu141.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd141.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr141.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml141.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu142.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd142.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr142.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml142.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu143.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd143.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr143.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml143.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu144.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd144.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr144.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml144.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom15.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup15.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft15.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright15.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown15.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu151.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd151.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr151.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml151.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu152.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd152.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr152.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml152.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu153.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd153.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr153.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml153.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu154.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd154.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr154.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml154.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown22.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu221.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd221.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr221.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml221.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu222.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd222.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr222.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml222.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu223.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd223.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr223.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml223.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu224.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd224.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr224.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml224.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown23.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu231.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd231.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr231.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml231.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu232.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd232.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr232.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml232.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu233.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd233.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr233.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml233.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu234.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd234.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr234.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml234.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boom25.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomup25.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomleft25.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomright25.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomdown25.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu251.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd251.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr251.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml251.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu252.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd252.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr252.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml252.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu253.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd253.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr253.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml253.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomu254.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomd254.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, boomr254.BoundsRect) or intersectrect(r,
+    Player2.BoundsRect, booml254.BoundsRect)) And (pllife2 = true) then
+  begin
+    pllife2 := false;
+    dead22.Visible := true;
+    dead2.Enabled := true;
+  end;
+  if (pllife2 = false) and (pllife1 = true) then
+    win1.Visible := true
+  else
+    win1.Visible := false;
+  if (pllife2 = true) and (pllife1 = false) then
+    win2.Visible := true
+  else
+    win2.Visible := false;
+
+end;
+
+// смерть 2 играка
+procedure TBomform.dead2Timer(Sender: TObject);
+begin
+
+  if pllife2 = false then
+    case int2 of
+      0, 2:
+        begin
+          player2.Visible := false;
+          pl2dead.Left := 80;
+          int2 := int2 + 1;
+
+        end;
+      1, 3:
+        begin
+          player2.Visible := true;
+          int2 := int2 + 1;
+        end;
+      4:
+        begin
+          back(player2);
+          int2 := int2 + 1;
+        end;
+      8:
+        begin
+          back(pl2dead);
+          dead2.Enabled := false;
+          check.Enabled := false;
+          mnu := true;
+          mnut.Enabled := true;
+        end;
+    else
+      int2 := int2 + 1;
+    end;
+
+end;
+
+// смерть 1 играка
+procedure TBomform.deadTimer(Sender: TObject);
+begin
+
+  if pllife1 = false then
+    case int of
+      0, 2:
+        begin
+          Player1.Visible := false;
+          pl1dead.Left := 80;
+          int := int + 1;
+
+        end;
+      1, 3:
+        begin
+          Player1.Visible := true;
+          int := int + 1;
+        end;
+      4:
+        begin
+          back(Player1);
+          int := int + 1;
+        end;
+      8:
+        begin
+          back(pl1dead);
+          dead.Enabled := false;
+          check.Enabled := false;
+          mnu := true;
+          mnut.Enabled := true;
+        end;
+    else
+      int := int + 1;
+    end;
+
+end;
+
+// создане формы
+procedure TBomform.FormCreate(Sender: TObject);
+var
+  i, I2, h, g: integer;
+begin
+  Bomform.ClientHeight := 600;
+  Bomform.Clientwidth := 680;
+  mnu := true;
+  menu.Left := 0;
+  menu.Top := 0;
+  btnstart.Left := 206;
+  btnstart.Top := 250;
+  Player1.Left := 40;
+  Player1.Top := 40;
+  pllife1 := true;
+  player2.Left := 520;
+  player2.Top := 520;
+  pllife2 := true;
+  int := 0;
+  int2 := 0;
+  Bomform.DoubleBuffered := true;
+  bonus_bombs2 := 1;
+  bonus_bombs1 := 1;
+  bonus_bomb1 := 1;
+  bonus_bomb2 := 1;
+  bb1 := false;
+  bb2 := false;
+  bb12 := false;
+  bb22 := false;
+  bb13 := false;
+  bb23 := false;
+  bb14 := false;
+  bb24 := false;
+  bb15 := false;
+  bb25 := false;
+  wasd := 0;
+  run1 := true;
+  pllife1 := true;
+  bb2 := false;
+  wasd2 := 0;
+  run2 := true;
+  pllife2 := true;
+
+  v := true;
+  cxe := false;
+  player1run2.Enabled := false;
+  player2run2.Enabled := false;
+  v2 := true;
+  cxe2 := false;
+
+  bombt1.Enabled := false;
+  bombt2.Enabled := false;
+  bombgo1.Enabled := false;
+  bombgo12.Enabled := false;
+  bombgo2.Enabled := false;
+  bombgo22.Enabled := false;
+  check.Enabled := false;
+  bombc2.Enabled := true;
+  dead.Enabled := true;
+  dead2.Enabled := true;
+
+  Timeend.Enabled := false;
+  gr[5][5] := 2;
+  gr[6][5] := 2;
+  gr[7][5] := 4;
+  gr[9][5] := 2;
+  gr[5][6] := 2;
+  gr[8][5] := 2;
+  gr[7][6] := 3;
+  gr[9][6] := 2;
+  gr[5][7] := 2;
+  gr[6][7] := 2;
+  gr[7][7] := 4;
+  gr[9][7] := 2;
+  gr[5][8] := 2;
+  gr[8][7] := 2;
+  gr[7][8] := 3;
+  gr[9][8] := 2;
+  gr[5][9] := 2;
+  gr[6][9] := 2;
+  gr[7][9] := 4;
+  gr[9][9] := 2;
+  gr[5][10] := 2;
+  gr[8][9] := 2;
+  gr[7][10] := 3;
+  gr[9][10] := 2;
+  gr[5][4] := 5;
+  gr[6][4] := 5;
+  gr[7][4] := 5;
+  gr[8][4] := 5;
+  gr[9][4] := 5;
+  gr[5][11] := 5;
+  gr[6][11] := 5;
+  gr[7][11] := 5;
+  gr[8][11] := 5;
+  gr[9][11] := 5;
+  h := 0;
+  g := 40;
+  for i := 0 to 5 do
+  begin
+    for I2 := 0 to 2 do
+    begin
+      g := g + 20;
+      graund[h] := g;
+      h := h + 1;
+    end;
+    g := g + 20;
+  end;
+
+end;
+
+// клавиши
+procedure TBomform.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+  i: integer;
+  vac, vac2: boolean;
+
+begin
+
+  if mnu = false and run1 = true and (wasd = 0) and (pllife1 = true) then
+  begin
+    case Key of
+      // управление персанажем
+      68: // D
+        begin
+          vac := true;
+          cxe := false;
+          for i := 0 to 17 do
+            if graund[i] = Player1.Top then
+              cxe := true;
+          for i := 1 to 169 do
+            if ((bonus_run1 = false) and ((gr1[i] = Player1.Left + 40) and
+              (gr2[i] = Player1.Top))) or
+              ((bonus_brun1 = false) and ((bombgr[i][1] = Player1.Left + 40) and
+              (bombgr[i][2] = Player1.Top))) then
+              vac := false;
+          if bonus_brun1 = true then
+            if ((bomb1.Left = Player1.Left + 40) and (bomb1.Top = Player1.Top))
+              and (bombgo1.Enabled = false) then
+            begin
+              bombwasd1 := 1;
+              bombgo1.Enabled := true;
+            end
+            else if ((bomb12.Left = Player1.Left + 40) and
+              (bomb12.Top = Player1.Top)) and (bombgo12.Enabled = false) then
+            begin
+              bombwasd12 := 1;
+              bombgo12.Enabled := true;
+            end
+            else if ((bomb13.Left = Player1.Left + 40) and
+              (bomb13.Top = Player1.Top)) and (bombgo13.Enabled = false) then
+            begin
+              bombwasd13 := 1;
+              bombgo13.Enabled := true;
+            end
+            else if ((bomb14.Left = Player1.Left + 40) and
+              (bomb14.Top = Player1.Top)) and (bombgo14.Enabled = false) then
+            begin
+              bombwasd14 := 1;
+              bombgo14.Enabled := true;
+            end
+            else if ((bomb15.Left = Player1.Left + 40) and
+              (bomb15.Top = Player1.Top)) and (bombgo12.Enabled = false) then
+            begin
+              bombwasd15 := 1;
+              bombgo15.Enabled := true;
+            end;
+
+          if ((Player1.Left < 520) and (cxe = false) and (v = true) and
+            (vac = true)) then
+          begin
+            Player1.Left := Player1.Left + 20;
+            v := false;
+            player1run1.Enabled := true;
+            player1run2.Enabled := false;
+            wasd := 1;
+            run1 := false;
+          end;
+
+        end;
+      87: // W
+        begin
+          vac := true;
+          cxe := false;
+          for i := 0 to 18 do
+            if (graund[i] = Player1.Left) then
+              cxe := true;
+          for i := 1 to 169 do
+            if ((bonus_run1 = false) and (gr1[i] = Player1.Left)) and
+              (gr2[i] = Player1.Top - 40) or
+              ((bonus_brun1 = false) and ((bombgr[i][1] = Player1.Left)) and
+              (bombgr[i][2] = Player1.Top - 40)) then
+              vac := false;
+          if bonus_brun1 = true then
+            if ((bomb1.Left = Player1.Left) and (bomb1.Top = Player1.Top - 40))
+              and (bombgo1.Enabled = false) then
+            begin
+              bombwasd1 := 2;
+              bombgo1.Enabled := true;
+            end
+            else if ((bomb12.Left = Player1.Left) and
+              (bomb12.Top = Player1.Top - 40)) and (bombgo12.Enabled = false)
+            then
+            begin
+              bombwasd12 := 2;
+              bombgo12.Enabled := true;
+            end
+            else if ((bomb13.Left = Player1.Left) and
+              (bomb13.Top = Player1.Top - 40)) and (bombgo13.Enabled = false)
+            then
+            begin
+              bombwasd13 := 2;
+              bombgo13.Enabled := true;
+            end
+            else if ((bomb14.Left = Player1.Left) and
+              (bomb14.Top = Player1.Top - 40)) and (bombgo14.Enabled = false)
+            then
+            begin
+              bombwasd14 := 2;
+              bombgo14.Enabled := true;
+            end
+            else if ((bomb15.Left = Player1.Left) and
+              (bomb15.Top = Player1.Top - 40)) and (bombgo15.Enabled = false)
+            then
+            begin
+              bombwasd15 := 2;
+              bombgo15.Enabled := true;
+            end;
+
+          if (Player1.Top > 40) and (cxe = false) and (v = true) and (vac = true)
+          then
+          begin
+            Player1.Top := Player1.Top - 20;
+            v := false;
+            player1run1.Enabled := true;
+            player1run2.Enabled := false;
+            wasd := 2;
+            run1 := false;
+          end;
+
+        end;
+      83: // S
+        begin
+          vac := true;
+          cxe := false;
+          for i := 0 to 18 do
+            if (graund[i] = Player1.Left) then
+              cxe := true;
+          for i := 1 to 169 do
+            if ((bonus_run1 = false) and ((gr1[i] = Player1.Left) and
+              (gr2[i] = Player1.Top + 40))) or
+              ((bonus_brun1 = false) and ((bombgr[i][1] = Player1.Left) and
+              (bombgr[i][2] = Player1.Top + 40))) then
+              vac := false;
+          if bonus_brun1 = true then
+            if ((bomb1.Left = Player1.Left) and (bomb1.Top = Player1.Top + 40))
+              and (bombgo1.Enabled = false) then
+            begin
+              bombwasd1 := 3;
+              bombgo1.Enabled := true;
+            end
+            else if ((bomb12.Left = Player1.Left) and
+              (bomb12.Top = Player1.Top + 40)) and (bombgo12.Enabled = false)
+            then
+            begin
+              bombwasd12 := 3;
+              bombgo12.Enabled := true;
+            end
+            else if ((bomb13.Left = Player1.Left) and
+              (bomb13.Top = Player1.Top + 40)) and (bombgo13.Enabled = false)
+            then
+            begin
+              bombwasd13 := 3;
+              bombgo13.Enabled := true;
+            end
+            else if ((bomb14.Left = Player1.Left) and
+              (bomb14.Top = Player1.Top + 40)) and (bombgo14.Enabled = false)
+            then
+            begin
+              bombwasd14 := 3;
+              bombgo14.Enabled := true;
+            end
+            else if ((bomb15.Left = Player1.Left) and
+              (bomb15.Top = Player1.Top + 40)) and (bombgo15.Enabled = false)
+            then
+            begin
+              bombwasd15 := 3;
+              bombgo15.Enabled := true;
+            end;
+
+          if (Player1.Top < 520) and (cxe = false) and (v = true) and
+            (vac = true) then
+          begin
+            Player1.Top := Player1.Top + 20;
+            v := false;
+            player1run1.Enabled := true;
+            player1run2.Enabled := false;
+            wasd := 3;
+            run1 := false;
+          end;
+        end;
+      65: // A
+        begin
+          vac := true;
+          cxe := false;
+          for i := 0 to 18 do
+            if (graund[i] = Player1.Top) then
+              cxe := true;
+          for i := 1 to 169 do
+            if ((bonus_run1 = false) and ((gr1[i] = Player1.Left - 40) and
+              (gr2[i] = Player1.Top))) or
+              ((bonus_brun1 = false) and ((bombgr[i][1] = Player1.Left - 40) and
+              (bombgr[i][2] = Player1.Top))) then
+              vac := false;
+          if bonus_brun1 = true then
+            if ((bomb1.Left = Player1.Left - 40) and (bomb1.Top = Player1.Top))
+              and (bombgo1.Enabled = false) then
+            begin
+              bombwasd1 := 4;
+              bombgo1.Enabled := true;
+            end
+            else if ((bomb12.Left = Player1.Left - 40) and
+              (bomb12.Top = Player1.Top)) and (bombgo12.Enabled = false) then
+            begin
+              bombwasd12 := 4;
+              bombgo12.Enabled := true;
+            end
+            else if ((bomb13.Left = Player1.Left - 40) and
+              (bomb13.Top = Player1.Top)) and (bombgo13.Enabled = false) then
+            begin
+              bombwasd13 := 4;
+              bombgo13.Enabled := true;
+            end
+            else if ((bomb14.Left = Player1.Left - 40) and
+              (bomb14.Top = Player1.Top)) and (bombgo14.Enabled = false) then
+            begin
+              bombwasd14 := 4;
+              bombgo14.Enabled := true;
+            end
+            else if ((bomb15.Left = Player1.Left - 40) and
+              (bomb15.Top = Player1.Top)) and (bombgo15.Enabled = false) then
+            begin
+              bombwasd15 := 4;
+              bombgo15.Enabled := true;
+            end;
+
+          if (Player1.Left > 40) and (cxe = false) and (v = true) and
+            (vac = true) then
+          begin
+            Player1.Left := Player1.Left - 20;
+            v := false;
+            player1run1.Enabled := true;
+            player1run2.Enabled := false;
+            wasd := 4;
+            run1 := false;
+          end;
+        end;
+      32:
+        begin // бомбы
+          vac := true;
+          for i := 1 to 169 do
+            if (gr1[i] = Player1.Left) and (gr2[i] = Player1.Top) or
+              ((bombgr[i][1] = Player1.Left) and (bombgr[i][2] = Player1.Top))
+            then
+              vac := false;
+          if bb1 = false AND run1 = true and vac = true then
+          begin
+            join(bomb1, Player1);
+            bombgr[1][1] := bomb1.Left;
+            bombgr[1][2] := bomb1.Top;
+            bombpos[1][1] := bomb1.Left;
+            bombpos[1][2] := bomb1.Top;
+            bb1 := true;
+            bombt1.Enabled := true;
+          end
+          else if (bonus_bombs1 >= 2) AND (bb12 = false) AND (run1 = true) and
+            (vac = true) then
+          begin
+            join(bomb12, Player1);
+            bombgr[2][1] := bomb12.Left;
+            bombgr[2][2] := bomb12.Top;
+            bombpos[2][1] := bomb12.Left;
+            bombpos[2][2] := bomb12.Top;
+            bb12 := true;
+            bombt12.Enabled := true;
+          end
+          else if (bonus_bombs1 >= 3) AND (bb13 = false) AND (run1 = true) and
+            (vac = true) then
+          begin
+            join(bomb13, Player1);
+            bombgr[3][1] := bomb13.Left;
+            bombgr[3][2] := bomb13.Top;
+            bombpos[3][1] := bomb13.Left;
+            bombpos[3][2] := bomb13.Top;
+            bb13 := true;
+            bombt13.Enabled := true;
+          end
+          else if (bonus_bombs1 >= 4) AND (bb14 = false) AND (run1 = true) and
+            (vac = true) then
+          begin
+            join(bomb14, Player1);
+            bombgr[4][1] := bomb14.Left;
+            bombgr[4][2] := bomb14.Top;
+            bombpos[4][1] := bomb14.Left;
+            bombpos[4][2] := bomb14.Top;
+            bb14 := true;
+            bombt14.Enabled := true;
+          end
+          else if (bonus_bombs1 = 5) AND (bb15 = false) AND (run1 = true) and
+            (vac = true) then
+          begin
+            join(bomb15, Player1);
+            bombgr[5][1] := bomb15.Left;
+            bombgr[5][2] := bomb15.Top;
+            bombpos[5][1] := bomb15.Left;
+            bombpos[5][2] := bomb15.Top;
+            bb15 := true;
+            bombt15.Enabled := true;
+          end;
+
+        end;
+    end;
+  end;
+
+  if mnu = false and run2 = true and (wasd2 = 0) and (pllife2 = true) then
+  begin
+    case Key of
+      // управление персанажем 2
+      39: // D
+        begin
+          vac2 := true;
+          cxe2 := false;
+          for i := 0 to 17 do
+            if graund[i] = player2.Top then
+              cxe2 := true;
+          for i := 1 to 169 do
+            if ((bonus_run2 = false) and ((gr1[i] = player2.Left + 40) and
+              (gr2[i] = player2.Top))) or
+              ((bonus_brun2 = false) and ((bombgr[i][1] = player2.Left + 40) and
+              (bombgr[i][2] = player2.Top))) then
+              vac2 := false;
+          if bonus_brun2 = true then
+            if ((bomb2.Left = player2.Left + 40) and (bomb2.Top = player2.Top))
+              and (bombgo2.Enabled = false) then
+            begin
+              bombwasd2 := 1;
+              bombgo2.Enabled := true;
+            end
+            else if ((bomb22.Left = player2.Left + 40) and
+              (bomb22.Top = player2.Top)) and (bombgo22.Enabled = false) then
+            begin
+              bombwasd22 := 1;
+              bombgo22.Enabled := true;
+            end
+            else if ((bomb23.Left = player2.Left + 40) and
+              (bomb23.Top = player2.Top)) and (bombgo23.Enabled = false) then
+            begin
+              bombwasd23 := 1;
+              bombgo23.Enabled := true;
+            end
+            else if ((bomb24.Left = player2.Left + 40) and
+              (bomb24.Top = player2.Top)) and (bombgo24.Enabled = false) then
+            begin
+              bombwasd24 := 1;
+              bombgo24.Enabled := true;
+            end
+            else if ((bomb25.Left = player2.Left + 40) and
+              (bomb25.Top = player2.Top)) and (bombgo25.Enabled = false) then
+            begin
+              bombwasd25 := 1;
+              bombgo25.Enabled := true;
+            end;
+
+          if ((player2.Left < 520) and (cxe2 = false) and (v2 = true) and
+            (vac2 = true)) then
+          begin
+            player2.Left := player2.Left + 20;
+            v2 := false;
+            player2run1.Enabled := true;
+            player2run2.Enabled := false;
+            wasd2 := 1;
+            run2 := false;
+          end;
+
+        end;
+      38: // W
+        begin
+          vac2 := true;
+          cxe2 := false;
+          for i := 0 to 18 do
+            if (graund[i] = player2.Left) then
+              cxe2 := true;
+          for i := 1 to 169 do
+            if ((bonus_run2 = false) and (gr1[i] = player2.Left) and
+              (gr2[i] = player2.Top - 40)) or
+              ((bonus_brun2 = false) and ((bombgr[i][1] = player2.Left) and
+              (bombgr[i][2] = player2.Top - 40))) then
+              vac2 := false;
+          if bonus_brun2 = true then
+            if ((bomb2.Left = player2.Left) and (bomb2.Top = player2.Top - 40))
+              and (bombgo2.Enabled = false) then
+            begin
+              bombwasd2 := 2;
+              bombgo2.Enabled := true;
+            end
+            else if ((bomb22.Left = player2.Left) and
+              (bomb22.Top = player2.Top - 40)) and (bombgo22.Enabled = false)
+            then
+            begin
+              bombwasd22 := 2;
+              bombgo22.Enabled := true;
+            end
+            else if ((bomb23.Left = player2.Left) and
+              (bomb23.Top = player2.Top - 40)) and (bombgo23.Enabled = false)
+            then
+            begin
+              bombwasd23 := 2;
+              bombgo23.Enabled := true;
+            end
+            else if ((bomb24.Left = player2.Left) and
+              (bomb24.Top = player2.Top - 40)) and (bombgo24.Enabled = false)
+            then
+            begin
+              bombwasd24 := 2;
+              bombgo24.Enabled := true;
+            end
+            else if ((bomb25.Left = player2.Left) and
+              (bomb25.Top = player2.Top - 40)) and (bombgo25.Enabled = false)
+            then
+            begin
+              bombwasd25 := 2;
+              bombgo25.Enabled := true;
+            end;
+
+          if (player2.Top > 40) and (cxe2 = false) and (v2 = true) and
+            (vac2 = true) then
+          begin
+            player2.Top := player2.Top - 20;
+            v2 := false;
+            player2run1.Enabled := true;
+            player2run2.Enabled := false;
+            wasd2 := 2;
+            run2 := false;
+          end;
+
+        end;
+      40: // S
+        begin
+          vac2 := true;
+          cxe2 := false;
+          for i := 0 to 18 do
+            if (graund[i] = player2.Left) then
+              cxe2 := true;
+          for i := 1 to 169 do
+            if ((bonus_run2 = false) and (gr1[i] = player2.Left) and
+              (gr2[i] = player2.Top + 40)) or
+              ((bonus_brun2 = false) and ((bombgr[i][1] = player2.Left) and
+              (bombgr[i][2] = player2.Top + 40))) then
+              vac2 := false;
+          if bonus_brun2 = true then
+            if ((bomb2.Left = player2.Left) and (bomb2.Top = player2.Top + 40))
+              and (bombgo2.Enabled = false) then
+            begin
+              bombwasd2 := 3;
+              bombgo2.Enabled := true;
+            end
+            else if ((bomb22.Left = player2.Left) and
+              (bomb22.Top = player2.Top + 40)) and (bombgo22.Enabled = false)
+            then
+            begin
+              bombwasd22 := 3;
+              bombgo22.Enabled := true;
+            end
+            else if ((bomb23.Left = player2.Left) and
+              (bomb23.Top = player2.Top + 40)) and (bombgo23.Enabled = false)
+            then
+            begin
+              bombwasd23 := 3;
+              bombgo23.Enabled := true;
+            end
+            else if ((bomb24.Left = player2.Left) and
+              (bomb24.Top = player2.Top + 40)) and (bombgo24.Enabled = false)
+            then
+            begin
+              bombwasd24 := 3;
+              bombgo24.Enabled := true;
+            end
+            else if ((bomb25.Left = player2.Left) and
+              (bomb25.Top = player2.Top + 40)) and (bombgo25.Enabled = false)
+            then
+            begin
+              bombwasd25 := 3;
+              bombgo25.Enabled := true;
+            end;
+
+          if (player2.Top < 520) and (cxe2 = false) and (v2 = true) and
+            (vac2 = true) then
+          begin
+            player2.Top := player2.Top + 20;
+            v2 := false;
+            player2run1.Enabled := true;
+            player2run2.Enabled := false;
+            wasd2 := 3;
+            run2 := false;
+          end;
+        end;
+      37: // A
+        begin
+          vac2 := true;
+          cxe2 := false;
+          for i := 0 to 18 do
+            if (graund[i] = player2.Top) then
+              cxe2 := true;
+          for i := 1 to 169 do
+            if ((bonus_run2 = false) and (gr1[i] = player2.Left - 40) and
+              (gr2[i] = player2.Top)) or
+              ((bonus_brun2 = false) and ((bombgr[i][1] = player2.Left - 40) and
+              (bombgr[i][2] = player2.Top))) then
+              vac2 := false;
+          if bonus_brun2 = true then
+            if ((bomb2.Left = player2.Left - 40) and (bomb2.Top = player2.Top))
+              and (bombgo2.Enabled = false) then
+            begin
+              bombwasd2 := 4;
+              bombgo2.Enabled := true;
+            end
+            else if ((bomb22.Left = player2.Left - 40) and
+              (bomb22.Top = player2.Top)) and (bombgo22.Enabled = false) then
+            begin
+              bombwasd22 := 4;
+              bombgo22.Enabled := true;
+            end
+            else if ((bomb23.Left = player2.Left - 40) and
+              (bomb23.Top = player2.Top)) and (bombgo23.Enabled = false) then
+            begin
+              bombwasd23 := 4;
+              bombgo23.Enabled := true;
+            end
+            else if ((bomb24.Left = player2.Left - 40) and
+              (bomb24.Top = player2.Top)) and (bombgo24.Enabled = false) then
+            begin
+              bombwasd24 := 4;
+              bombgo24.Enabled := true;
+            end
+            else if ((bomb25.Left = player2.Left - 40) and
+              (bomb25.Top = player2.Top)) and (bombgo25.Enabled = false) then
+            begin
+              bombwasd25 := 4;
+              bombgo25.Enabled := true;
+            end;
+
+          if (player2.Left > 40) and (cxe2 = false) and (v2 = true) and
+            (vac2 = true) then
+          begin
+            player2.Left := player2.Left - 20;
+            v2 := false;
+            player2run1.Enabled := true;
+            player2run2.Enabled := false;
+            wasd2 := 4;
+            run2 := false;
+          end;
+        end;
+      96:
+        begin // бомбы
+
+          vac2 := true;
+          for i := 1 to 169 do
+            if ((gr1[i] = player2.Left) and (gr2[i] = player2.Top)) or
+              ((bombgr[i][1] = player2.Left) and (bombgr[i][2] = player2.Top))
+            then
+              vac2 := false;
+          if bb2 = false AND run2 = true and vac2 = true then
+          begin
+            join(bomb2, player2);
+            bombgr[6][1] := bomb2.Left;
+            bombgr[6][2] := bomb2.Top;
+            bombpos[6][1] := bomb2.Left;
+            bombpos[6][2] := bomb2.Top;
+            bb2 := true;
+            bombt2.Enabled := true;
+          end
+          else if (bonus_bombs2 >= 2) AND (bb22 = false) AND (run2 = true) and
+            (vac2 = true) then
+          begin
+            join(bomb22, player2);
+            bombgr[7][1] := bomb22.Left;
+            bombgr[7][2] := bomb22.Top;
+            bombpos[7][1] := bomb22.Left;
+            bombpos[7][2] := bomb22.Top;
+            bb22 := true;
+            bombt22.Enabled := true;
+          end
+          else if (bonus_bombs2 >= 3) AND (bb23 = false) AND (run2 = true) and
+            (vac2 = true) then
+          begin
+            join(bomb23, player2);
+            bombgr[8][1] := bomb23.Left;
+            bombgr[8][2] := bomb23.Top;
+            bombpos[8][1] := bomb23.Left;
+            bombpos[8][2] := bomb23.Top;
+            bb23 := true;
+            bombt23.Enabled := true;
+          end
+          else if (bonus_bombs2 >= 4) AND (bb24 = false) AND (run2 = true) and
+            (vac2 = true) then
+          begin
+            join(bomb24, player2);
+            bombgr[9][1] := bomb24.Left;
+            bombgr[9][2] := bomb24.Top;
+            bombpos[9][1] := bomb24.Left;
+            bombpos[9][2] := bomb24.Top;
+            bb24 := true;
+            bombt24.Enabled := true;
+          end
+          else if (bonus_bombs2 = 5) AND (bb25 = false) AND (run2 = true) and
+            (vac2 = true) then
+          begin
+            join(bomb25, player2);
+            bombgr[10][1] := bomb25.Left;
+            bombgr[10][2] := bomb25.Top;
+            bombpos[10][1] := bomb25.Left;
+            bombpos[10][2] := bomb25.Top;
+            bb25 := true;
+            bombt25.Enabled := true;
+          end;
+
+        end;
+    end;
+  end;
+  if learn = false then
+    case Key of
+      27: // меню
+        begin
+          if mnut.Enabled = true and (pllife1 = true and pllife2 = true) then
+          begin
+            mnut.Enabled := false;
+            mnu := false;
+            back(menu);
+            back(btnstart);
+            back(btnlearn);
+            back(exit);
+            back(btnoption);
+            back(btntitre);
+            pllife1 := true;
+            pllife2 := true;
+            check.Enabled := true;
+          end
+          else
+          begin
+            check.Enabled := false;
+            mnu := true;
+            mnut.Enabled := true;
+          end;
+
+        end;
+    end;
+
+end;
+
+procedure TBomform.Image41Click(Sender: TObject);
+begin
+
+end;
+
+// обучение1
+procedure TBomform.learn1Click(Sender: TObject);
+begin
+  back(learn1);
+  learn2.Left := 0;
+  learn2.Top := 0;
+end;
+
+// обучение2
+procedure TBomform.learn2Click(Sender: TObject);
+begin
+  back(learn2);
+  learn3.Left := 0;
+  learn3.Top := 0;
+end;
+
+// обучение3
+procedure TBomform.learn3Click(Sender: TObject);
+begin
+  back(learn3);
+  learn4.Left := 0;
+  learn4.Top := 0;
+end;
+
+// обучение4
+procedure TBomform.learn4Click(Sender: TObject);
+begin
+  back(learn4);
+  learn := false;
+
+end;
+
+// меню
+procedure TBomform.mnutTimer(Sender: TObject);
+begin
+  menu.Left := 0;
+  menu.Top := 0;
+  btnstart.Left := 206;
+  btnstart.Top := 245;
+  btnlearn.Left := 206;
+  btnlearn.Top := 340;
+  btntitre.Left := 10;
+  btntitre.Top := 550;
+  btnoption.Left := 490;
+  btnoption.Top := 550;
+  exit.Left := 206;
+  exit.Top := 440;
+
+end;
+
+// ходьба 2 играка 1
+procedure TBomform.player2run1Timer(Sender: TObject);
+begin
+  case wasd2 of // ходьба
+    1:
+      begin
+        if ((player2.Left < 520) and (cxe2 = false)) then
+          player2.Left := player2.Left + 20;
+
+        player2run1.Enabled := false;
+      end;
+    2:
+      begin
+        if (player2.Top > 40) and (cxe2 = false) then
+          player2.Top := player2.Top - 20;
+
+        player2run1.Enabled := false;
+      end;
+
+    3:
+      begin
+        if (player2.Top < 520) and (cxe2 = false) then
+          player2.Top := player2.Top + 20;
+
+        player2run1.Enabled := false;
+      end;
+    4:
+      begin
+        if (player2.Left > 40) and (cxe = false) then
+          player2.Left := player2.Left - 20;
+
+        player2run1.Enabled := false;
+      end;
+  end;
+  player2run2.Enabled := true;
+end;
+
+// ходба 2 играка 2
+procedure TBomform.player2run2Timer(Sender: TObject);
+begin
+  v2 := true;
+  run2 := true;
+  wasd2 := 0;
+end;
+
+// время конец
+procedure TBomform.TimeendTimer(Sender: TObject);
+
+begin
+  if mnu = false then
+  begin
+    case iend of
+      1:
+        gr[1][1] := 6;
+      2:
+        gr[2][1] := 6;
+      3:
+        gr[3][1] := 6;
+      4:
+        gr[4][1] := 6;
+      5:
+        gr[5][1] := 6;
+      6:
+        gr[6][1] := 6;
+      7:
+        gr[7][1] := 6;
+      8:
+        gr[8][1] := 6;
+      9:
+        gr[9][1] := 6;
+      10:
+        gr[10][1] := 6;
+      11:
+        gr[11][1] := 6;
+      12:
+        gr[12][1] := 6;
+      13:
+        gr[13][1] := 6;
+      14:
+        gr[13][1] := 6;
+      15:
+        gr[13][2] := 6;
+      16:
+        gr[13][3] := 6;
+      17:
+        gr[13][4] := 6;
+      18:
+        gr[13][5] := 6;
+      19:
+        gr[13][6] := 6;
+      20:
+        gr[13][7] := 6;
+      21:
+        gr[13][8] := 6;
+      22:
+        gr[13][9] := 6;
+      23:
+        gr[13][10] := 6;
+      24:
+        gr[13][11] := 6;
+      25:
+        gr[13][12] := 6;
+      26:
+        gr[13][13] := 6;
+      27:
+        gr[12][13] := 6;
+      28:
+        gr[11][13] := 6;
+      29:
+        gr[10][13] := 6;
+      30:
+        gr[9][13] := 6;
+      31:
+        gr[8][13] := 6;
+      32:
+        gr[7][13] := 6;
+      33:
+        gr[6][13] := 6;
+      34:
+        gr[5][13] := 6;
+      35:
+        gr[4][13] := 6;
+      36:
+        gr[3][13] := 6;
+      37:
+        gr[2][13] := 6;
+      38:
+        gr[1][13] := 6;
+      39:
+        gr[1][12] := 6;
+      40:
+        gr[1][11] := 6;
+      41:
+        gr[1][10] := 6;
+      42:
+        gr[1][9] := 6;
+      43:
+        gr[1][8] := 6;
+      44:
+        gr[1][7] := 6;
+      45:
+        gr[1][6] := 6;
+      46:
+        gr[1][5] := 6;
+      47:
+        gr[1][4] := 6;
+      48:
+        gr[1][3] := 6;
+      49:
+        gr[1][2] := 6;
+      50:
+        gr[2][2] := 6;
+      51:
+        gr[3][2] := 6;
+      52:
+        gr[4][2] := 6;
+      53:
+        gr[5][2] := 6;
+      54:
+        gr[6][2] := 6;
+      55:
+        gr[7][2] := 6;
+      56:
+        gr[8][2] := 6;
+      57:
+        gr[9][2] := 6;
+      58:
+        gr[10][2] := 6;
+      59:
+        gr[11][2] := 6;
+      60:
+        gr[12][2] := 6;
+      61:
+        gr[12][3] := 6;
+      62:
+        gr[12][4] := 6;
+      63:
+        gr[12][5] := 6;
+      64:
+        gr[12][6] := 6;
+      65:
+        gr[12][7] := 6;
+      66:
+        gr[12][8] := 6;
+      67:
+        gr[12][9] := 6;
+      68:
+        gr[12][10] := 6;
+      69:
+        gr[12][11] := 6;
+      70:
+        gr[12][12] := 6;
+      71:
+        gr[11][12] := 6;
+      72:
+        gr[10][12] := 6;
+      73:
+        gr[9][12] := 6;
+      74:
+        gr[8][12] := 6;
+      75:
+        gr[7][12] := 6;
+      76:
+        gr[6][12] := 6;
+      77:
+        gr[5][12] := 6;
+      78:
+        gr[4][12] := 6;
+      79:
+        gr[3][12] := 6;
+      80:
+        gr[2][12] := 6;
+      81:
+        gr[2][11] := 6;
+      82:
+        gr[2][10] := 6;
+      83:
+        gr[2][9] := 6;
+      84:
+        gr[2][8] := 6;
+      85:
+        gr[2][7] := 6;
+      86:
+        gr[2][6] := 6;
+      87:
+        gr[2][5] := 6;
+      88:
+        gr[2][4] := 6;
+      89:
+        gr[2][3] := 6;
+      90:
+        gr[3][3] := 6;
+      91:
+        gr[4][3] := 6;
+      92:
+        gr[5][3] := 6;
+      93:
+        gr[6][3] := 6;
+      94:
+        gr[7][3] := 6;
+      95:
+        gr[8][3] := 6;
+      96:
+        gr[9][3] := 6;
+      97:
+        gr[10][3] := 6;
+      98:
+        gr[11][3] := 6;
+      99:
+        gr[11][4] := 6;
+      100:
+        gr[11][5] := 6;
+      101:
+        gr[11][6] := 6;
+      102:
+        gr[11][7] := 6;
+      103:
+        gr[11][8] := 6;
+      104:
+        gr[11][9] := 6;
+      105:
+        gr[11][10] := 6;
+      106:
+        gr[11][11] := 6;
+      107:
+        gr[10][11] := 6;
+      108:
+        gr[9][11] := 6;
+      109:
+        gr[8][11] := 6;
+      110:
+        gr[7][11] := 6;
+      111:
+        gr[6][11] := 6;
+      112:
+        gr[5][11] := 6;
+      113:
+        gr[4][11] := 6;
+      114:
+        gr[3][11] := 6;
+      115:
+        gr[3][10] := 6;
+      116:
+        gr[3][9] := 6;
+      117:
+        gr[3][8] := 6;
+      118:
+        gr[3][7] := 6;
+      119:
+        gr[3][6] := 6;
+      120:
+        gr[3][5] := 6;
+      121:
+        gr[3][4] := 6;
+      122:
+        gr[4][4] := 6;
+      123:
+        gr[5][4] := 6;
+      124:
+        gr[6][4] := 6;
+      125:
+        gr[7][4] := 6;
+      126:
+        gr[8][4] := 6;
+      127:
+        gr[9][4] := 6;
+      128:
+        gr[10][4] := 6;
+      129:
+        gr[10][5] := 6;
+      130:
+        gr[10][6] := 6;
+      131:
+        gr[10][7] := 6;
+      132:
+        gr[10][8] := 6;
+      133:
+        gr[10][9] := 6;
+      134:
+        gr[10][10] := 6;
+      135:
+        gr[9][10] := 6;
+      136:
+        gr[8][10] := 6;
+      137:
+        gr[7][10] := 6;
+      138:
+        gr[6][10] := 6;
+      139:
+        gr[5][10] := 6;
+      140:
+        gr[4][10] := 6;
+      141:
+        gr[4][9] := 6;
+      142:
+        gr[4][8] := 6;
+      143:
+        gr[4][7] := 6;
+      144:
+        gr[4][6] := 6;
+      145:
+        gr[4][5] := 6;
+      146:
+        gr[5][5] := 6;
+      147:
+        gr[6][5] := 6;
+      148:
+        gr[7][5] := 6;
+      149:
+        gr[8][5] := 6;
+      150:
+        gr[9][5] := 6;
+      151:
+        gr[9][6] := 6;
+      152:
+        gr[9][7] := 6;
+      153:
+        gr[9][8] := 6;
+      154:
+        gr[9][9] := 6;
+      155:
+        gr[8][9] := 6;
+      156:
+        gr[7][9] := 6;
+      157:
+        gr[6][9] := 6;
+      158:
+        gr[5][9] := 6;
+      159:
+        gr[5][8] := 6;
+      160:
+        gr[5][7] := 6;
+      161:
+        gr[5][6] := 6;
+      162:
+        gr[6][6] := 6;
+      163:
+        gr[7][6] := 6;
+      164:
+        gr[8][6] := 6;
+      165:
+        gr[8][7] := 6;
+      166:
+        gr[8][8] := 6;
+      167:
+        gr[7][8] := 6;
+      168:
+        gr[6][8] := 6;
+      169:
+        gr[6][7] := 6;
+      170:
+        gr[7][7] := 6;
+
+    end;
+    inc(iend);
+  end;
+end;
+
+// время
+procedure TBomform.timeTimer(Sender: TObject);
+var
+  c, i, I2: integer;
+  C2: string;
+  vac: boolean;
+begin
+  C2 := Label7.caption;
+  c := strtoint(Label7.caption);
+  if mnu = false then
+
+    Label7.caption := inttostr(c + 1);
+  if length(C2) < length(Label7.caption) then
+    Label7.Left := (Label7.Left - 2);
+
+  Label5.caption := inttostr(bonus_bomb1);
+  Label11.caption := inttostr(bonus_bombs1);
+
+  if (bonus_brun1 = true) then
+    Label4.caption := '+'
+  else
+    Label4.caption := '-';
+  if (bonus_run1 = true) then
+    Label6.caption := '+'
+  else
+    Label6.caption := '-';
+
+  Label9.caption := inttostr(bonus_bomb2);
+  Label12.caption := inttostr(bonus_bombs2);
+
+  if (bonus_brun2 = true) then
+    Label8.caption := '+'
+  else
+    Label8.caption := '-';
+  if (bonus_run2 = true) then
+    Label10.caption := '+'
+  else
+    Label10.caption := '-';
+
+  for i := 1 to 13 do
+    for I2 := 1 to 13 do
+      if (gr[i][I2] = 0) and (gr[1][1] <> 6) then
+        vac := true
+      else
+        vac := false;
+  if (pllife1 = false) or (pllife2 = false) then
+    Timeend.Enabled := false;
+
+  if (strtoint(Label7.caption) >= 300) or (vac = false) then
+  begin
+    Timeend.Enabled := true;
+    Label7.Font.Color := clred;
+  end
+
+  else
+  begin
+    Timeend.Enabled := false;
+    Label7.Font.Color := clgreen;
+    iend := 0;
+
+  end;
+
+end;
+
+// титры закрыть
+procedure TBomform.TiterClick(Sender: TObject);
+begin
+  back(Titer);
+  learn := false;
+end;
+
+// ходьба 1 играка 1
+procedure TBomform.player1run1Timer(Sender: TObject);
+begin
+
+  case wasd of // ходьба
+    1:
+      begin
+        if ((Player1.Left < 520) and (cxe = false)) then
+          Player1.Left := Player1.Left + 20;
+        player1run1.Enabled := false;
+      end;
+    2:
+      begin
+        if (Player1.Top > 40) and (cxe = false) then
+          Player1.Top := Player1.Top - 20;
+
+        player1run1.Enabled := false;
+      end;
+
+    3:
+      begin
+        if (Player1.Top < 520) and (cxe = false) then
+          Player1.Top := Player1.Top + 20;
+
+        player1run1.Enabled := false;
+      end;
+    4:
+      begin
+        if (Player1.Left > 40) and (cxe = false) then
+          Player1.Left := Player1.Left - 20;
+
+        player1run1.Enabled := false;
+      end;
+
+  end;
+  player1run2.Enabled := true;
+end;
+
+// ходьба 1 играка 2
+procedure TBomform.player1run2Timer(Sender: TObject);
+begin
+  v := true;
+  run1 := true;
+  wasd := 0;
+end;
+
+// взрыв 2 играка 2 бомба
+procedure TBomform.bombt22Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка2
+  i, ce1, ce2, bt, x, y: integer;
+begin
+  bombgr[7][1] := 0;
+  bombgr[7][2] := 0;
+  join(boom22, bomb22);
+  back(bomb22);
+  ce1 := boom22.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+  ce2 := boom22.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom22.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom22.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom22.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup22, boom22);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb2) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup22.Top := 40
+    else
+      boomup22.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom22.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown22, boom22);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown22.Top := 520
+    else
+      boomdown22.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom22.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft22, boom22);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft22.Left := 40
+    else
+      boomleft22.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom22.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright22, boom22);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright22.Left := 520
+    else
+      boomright22.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom22.Top > 40) and (C2 = false) and (boom22.Top <> boomup22.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu221, boomup22);
+    boomu221.Top := boomup22.Top + 40;
+    if (boom22.Top <> boomu221.Top + 40) then
+    begin
+      join(boomu222, boomu221);
+      boomu222.Top := boomu221.Top + 40;
+      if (boom22.Top <> boomu222.Top + 40) then
+      begin
+        join(boomu223, boomu222);
+        boomu223.Top := boomu222.Top + 40;
+        if (boom22.Top <> boomu223.Top + 40) then
+        begin
+          join(boomu224, boomu223);
+          boomu224.Top := boomu223.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom22.Top < 520) and (C2 = false) and (boom22.Top <> boomdown22.Top - 40)
+  then // нижняя
+  begin
+    join(boomd221, boomdown22);
+    boomd221.Top := boomdown22.Top - 40;
+    if (boom22.Top <> boomd221.Top - 40) then
+    begin
+      join(boomd222, boomd221);
+      boomd222.Top := boomd221.Top - 40;
+      if (boom22.Top <> boomd222.Top - 40) then
+      begin
+        join(boomd223, boomd222);
+        boomd223.Top := boomd222.Top - 40;
+        if (boom22.Top <> boomd223.Top - 40) then
+        begin
+          join(boomd224, boomd223);
+          boomd224.Top := boomd223.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom22.Left > 40) and (C1 = false) and
+    (boom22.Left <> boomleft22.Left + 40) then
+  begin // левая
+    join(booml221, boomleft22);
+    booml221.Left := boomleft22.Left + 40;
+    if (boom22.Left <> booml221.Left + 40) then
+    begin
+      join(booml222, booml221);
+      booml222.Left := booml221.Left + 40;
+      if (boom22.Left <> booml222.Left + 40) then
+      begin
+        join(booml223, booml222);
+        booml223.Left := booml222.Left + 40;
+        if (boom22.Left <> booml223.Left + 40) then
+        begin
+          join(booml224, booml223);
+          booml224.Left := booml223.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom22.Left < 520) and (C1 = false) and
+    (boom22.Left <> boomright22.Left - 40) then // правая
+  begin
+    join(boomr221, boomright22);
+    boomr221.Left := boomright22.Left - 40;
+    if (boom22.Left <> boomr221.Left - 40) then
+    begin
+      join(boomr222, boomr221);
+      boomr222.Left := boomr221.Left - 40;
+      if (boom22.Left <> boomr222.Left - 40) then
+      begin
+        join(boomr223, boomr222);
+        boomr223.Left := boomr222.Left - 40;
+        if (boom22.Left <> boomr223.Left - 40) then
+        begin
+          join(boomr224, boomr223);
+          boomr224.Left := boomr223.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb22 := false;
+  C1 := false;
+  C2 := false;
+  bombt22.Enabled := false;
+  bombb22.Enabled := true;
+end;
+
+// взрыв 2 игрока 3 бомба
+procedure TBomform.bombt23Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка2
+  i, ce1, ce2, bt, x, y: integer;
+begin
+  bombgr[8][1] := 0;
+  bombgr[8][2] := 0;
+  join(boom23, bomb23);
+  back(bomb23);
+  ce1 := boom23.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+  ce2 := boom23.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom23.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom23.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom23.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup23, boom23);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb2) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup23.Top := 40
+    else
+      boomup23.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom23.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown23, boom23);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown23.Top := 520
+    else
+      boomdown23.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom23.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft23, boom23);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft23.Left := 40
+    else
+      boomleft23.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom23.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright23, boom23);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright23.Left := 520
+    else
+      boomright23.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom23.Top > 40) and (C2 = false) and (boom23.Top <> boomup23.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu231, boomup23);
+    boomu231.Top := boomup23.Top + 40;
+    if (boom23.Top <> boomu231.Top + 40) then
+    begin
+      join(boomu232, boomu231);
+      boomu232.Top := boomu231.Top + 40;
+      if (boom23.Top <> boomu232.Top + 40) then
+      begin
+        join(boomu233, boomu232);
+        boomu233.Top := boomu232.Top + 40;
+        if (boom23.Top <> boomu233.Top + 40) then
+        begin
+          join(boomu234, boomu233);
+          boomu234.Top := boomu233.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom23.Top < 520) and (C2 = false) and (boom23.Top <> boomdown23.Top - 40)
+  then // нижняя
+  begin
+    join(boomd231, boomdown23);
+    boomd231.Top := boomdown23.Top - 40;
+    if (boom23.Top <> boomd231.Top - 40) then
+    begin
+      join(boomd232, boomd231);
+      boomd232.Top := boomd231.Top - 40;
+      if (boom23.Top <> boomd232.Top - 40) then
+      begin
+        join(boomd233, boomd232);
+        boomd233.Top := boomd232.Top - 40;
+        if (boom23.Top <> boomd233.Top - 40) then
+        begin
+          join(boomd234, boomd233);
+          boomd234.Top := boomd233.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom23.Left > 40) and (C1 = false) and
+    (boom23.Left <> boomleft23.Left + 40) then
+  begin // левая
+    join(booml231, boomleft23);
+    booml231.Left := boomleft23.Left + 40;
+    if (boom23.Left <> booml231.Left + 40) then
+    begin
+      join(booml232, booml231);
+      booml232.Left := booml231.Left + 40;
+      if (boom23.Left <> booml232.Left + 40) then
+      begin
+        join(booml233, booml232);
+        booml233.Left := booml232.Left + 40;
+        if (boom23.Left <> booml233.Left + 40) then
+        begin
+          join(booml234, booml233);
+          booml234.Left := booml233.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom23.Left < 520) and (C1 = false) and
+    (boom23.Left <> boomright23.Left - 40) then // правая
+  begin
+    join(boomr231, boomright23);
+    boomr231.Left := boomright23.Left - 40;
+    if (boom23.Left <> boomr231.Left - 40) then
+    begin
+      join(boomr232, boomr231);
+      boomr232.Left := boomr231.Left - 40;
+      if (boom23.Left <> boomr232.Left - 40) then
+      begin
+        join(boomr233, boomr232);
+        boomr233.Left := boomr232.Left - 40;
+        if (boom23.Left <> boomr233.Left - 40) then
+        begin
+          join(boomr234, boomr233);
+          boomr234.Left := boomr233.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb23 := false;
+  C1 := false;
+  C2 := false;
+  bombt23.Enabled := false;
+  bombb23.Enabled := true;
+end;
+
+// взрыв 2 игрока 4 бомба
+procedure TBomform.bombt24Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка2
+  i, ce1, ce2, bt, x, y: integer;
+begin
+  bombgr[9][1] := 0;
+  bombgr[9][2] := 0;
+  join(boom24, bomb24);
+  back(bomb24);
+  ce1 := boom24.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+  ce2 := boom24.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom24.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom24.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom24.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup24, boom24);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb2) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup24.Top := 40
+    else
+      boomup24.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom24.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown24, boom24);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown24.Top := 520
+    else
+      boomdown24.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom24.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft24, boom24);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft24.Left := 40
+    else
+      boomleft24.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom24.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright24, boom24);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright24.Left := 520
+    else
+      boomright24.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom24.Top > 40) and (C2 = false) and (boom24.Top <> boomup24.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu241, boomup24);
+    boomu241.Top := boomup24.Top + 40;
+    if (boom24.Top <> boomu241.Top + 40) then
+    begin
+      join(boomu242, boomu241);
+      boomu242.Top := boomu241.Top + 40;
+      if (boom24.Top <> boomu242.Top + 40) then
+      begin
+        join(boomu243, boomu242);
+        boomu243.Top := boomu242.Top + 40;
+        if (boom24.Top <> boomu243.Top + 40) then
+        begin
+          join(boomu244, boomu243);
+          boomu244.Top := boomu243.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom24.Top < 520) and (C2 = false) and (boom24.Top <> boomdown24.Top - 40)
+  then // нижняя
+  begin
+    join(boomd241, boomdown24);
+    boomd241.Top := boomdown24.Top - 40;
+    if (boom24.Top <> boomd241.Top - 40) then
+    begin
+      join(boomd242, boomd241);
+      boomd242.Top := boomd241.Top - 40;
+      if (boom24.Top <> boomd242.Top - 40) then
+      begin
+        join(boomd243, boomd242);
+        boomd243.Top := boomd242.Top - 40;
+        if (boom24.Top <> boomd243.Top - 40) then
+        begin
+          join(boomd244, boomd243);
+          boomd244.Top := boomd243.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom24.Left > 40) and (C1 = false) and
+    (boom24.Left <> boomleft24.Left + 40) then
+  begin // левая
+    join(booml241, boomleft24);
+    booml241.Left := boomleft24.Left + 40;
+    if (boom24.Left <> booml241.Left + 40) then
+    begin
+      join(booml242, booml241);
+      booml242.Left := booml241.Left + 40;
+      if (boom24.Left <> booml242.Left + 40) then
+      begin
+        join(booml243, booml242);
+        booml243.Left := booml242.Left + 40;
+        if (boom24.Left <> booml243.Left + 40) then
+        begin
+          join(booml244, booml243);
+          booml244.Left := booml243.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom24.Left < 520) and (C1 = false) and
+    (boom24.Left <> boomright24.Left - 40) then // правая
+  begin
+    join(boomr241, boomright24);
+    boomr241.Left := boomright24.Left - 40;
+    if (boom24.Left <> boomr241.Left - 40) then
+    begin
+      join(boomr242, boomr241);
+      boomr242.Left := boomr241.Left - 40;
+      if (boom24.Left <> boomr242.Left - 40) then
+      begin
+        join(boomr243, boomr242);
+        boomr243.Left := boomr242.Left - 40;
+        if (boom24.Left <> boomr243.Left - 40) then
+        begin
+          join(boomr244, boomr243);
+          boomr244.Left := boomr243.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb24 := false;
+  C1 := false;
+  C2 := false;
+  bombt24.Enabled := false;
+  bombb24.Enabled := true;
+end;
+
+// взрыв 2 игрока 5 бомба
+procedure TBomform.bombt25Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка2
+  i, ce1, ce2, bt, x, y: integer;
+begin
+  bombgr[10][1] := 0;
+  bombgr[10][2] := 0;
+  join(boom25, bomb25);
+  back(bomb25);
+  ce1 := boom25.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+  ce2 := boom25.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom25.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom25.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom25.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup25, boom25);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb2) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup25.Top := 40
+    else
+      boomup25.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom25.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown25, boom25);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown25.Top := 520
+    else
+      boomdown25.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom25.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft25, boom25);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft25.Left := 40
+    else
+      boomleft25.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom25.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright25, boom25);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright25.Left := 520
+    else
+      boomright25.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom25.Top > 40) and (C2 = false) and (boom25.Top <> boomup25.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu251, boomup25);
+    boomu251.Top := boomup25.Top + 40;
+    if (boom25.Top <> boomu251.Top + 40) then
+    begin
+      join(boomu252, boomu251);
+      boomu252.Top := boomu251.Top + 40;
+      if (boom25.Top <> boomu252.Top + 40) then
+      begin
+        join(boomu253, boomu252);
+        boomu253.Top := boomu252.Top + 40;
+        if (boom25.Top <> boomu253.Top + 40) then
+        begin
+          join(boomu254, boomu253);
+          boomu254.Top := boomu253.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom25.Top < 520) and (C2 = false) and (boom25.Top <> boomdown25.Top - 40)
+  then // нижняя
+  begin
+    join(boomd251, boomdown25);
+    boomd251.Top := boomdown25.Top - 40;
+    if (boom25.Top <> boomd251.Top - 40) then
+    begin
+      join(boomd252, boomd251);
+      boomd252.Top := boomd251.Top - 40;
+      if (boom25.Top <> boomd252.Top - 40) then
+      begin
+        join(boomd253, boomd252);
+        boomd253.Top := boomd252.Top - 40;
+        if (boom25.Top <> boomd253.Top - 40) then
+        begin
+          join(boomd254, boomd253);
+          boomd254.Top := boomd253.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom25.Left > 40) and (C1 = false) and
+    (boom25.Left <> boomleft25.Left + 40) then
+  begin // левая
+    join(booml251, boomleft25);
+    booml251.Left := boomleft25.Left + 40;
+    if (boom25.Left <> booml251.Left + 40) then
+    begin
+      join(booml252, booml251);
+      booml252.Left := booml251.Left + 40;
+      if (boom25.Left <> booml252.Left + 40) then
+      begin
+        join(booml253, booml252);
+        booml253.Left := booml252.Left + 40;
+        if (boom25.Left <> booml253.Left + 40) then
+        begin
+          join(booml254, booml253);
+          booml254.Left := booml253.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom25.Left < 520) and (C1 = false) and
+    (boom25.Left <> boomright25.Left - 40) then // правая
+  begin
+    join(boomr251, boomright25);
+    boomr251.Left := boomright25.Left - 40;
+    if (boom25.Left <> boomr251.Left - 40) then
+    begin
+      join(boomr252, boomr251);
+      boomr252.Left := boomr251.Left - 40;
+      if (boom25.Left <> boomr252.Left - 40) then
+      begin
+        join(boomr253, boomr252);
+        boomr253.Left := boomr252.Left - 40;
+        if (boom25.Left <> boomr253.Left - 40) then
+        begin
+          join(boomr254, boomr253);
+          boomr254.Left := boomr253.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb25 := false;
+  C1 := false;
+  C2 := false;
+  bombt25.Enabled := false;
+  bombb25.Enabled := true;
+end;
+
+// взрыв 2 играка 1 бомба
+procedure TBomform.bombt2Timer(Sender: TObject); // взрыв бомбы играка2
+
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка2
+  i, ce1, ce2, bt, x, y: integer;
+begin
+  bombgr[6][1] := 0;
+  bombgr[6][2] := 0;
+  join(boom2, bomb2);
+  back(bomb2);
+  ce1 := boom2.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+  ce2 := boom2.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom2.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom2.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom2.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup2, boom2);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb2) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup2.Top := 40
+    else
+      boomup2.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom2.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown2, boom2);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown2.Top := 520
+    else
+      boomdown2.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom2.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft2, boom2);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft2.Left := 40
+    else
+      boomleft2.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom2.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright2, boom2);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb2) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright2.Left := 520
+    else
+      boomright2.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom2.Top > 40) and (C2 = false) and (boom2.Top <> boomup2.Top + 40) then
+  // верхняя
+  begin
+    join(boomu21, boomup2);
+    boomu21.Top := boomup2.Top + 40;
+    if (boom2.Top <> boomu21.Top + 40) then
+    begin
+      join(boomu22, boomu21);
+      boomu22.Top := boomu21.Top + 40;
+      if (boom2.Top <> boomu22.Top + 40) then
+      begin
+        join(boomu23, boomu22);
+        boomu23.Top := boomu22.Top + 40;
+        if (boom2.Top <> boomu23.Top + 40) then
+        begin
+          join(boomu24, boomu23);
+          boomu24.Top := boomu23.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom2.Top < 520) and (C2 = false) and (boom2.Top <> boomdown2.Top - 40)
+  then // нижняя
+  begin
+    join(boomd21, boomdown2);
+    boomd21.Top := boomdown2.Top - 40;
+    if (boom2.Top <> boomd21.Top - 40) then
+    begin
+      join(boomd22, boomd21);
+      boomd22.Top := boomd21.Top - 40;
+      if (boom2.Top <> boomd22.Top - 40) then
+      begin
+        join(boomd23, boomd22);
+        boomd23.Top := boomd22.Top - 40;
+        if (boom2.Top <> boomd23.Top - 40) then
+        begin
+          join(boomd24, boomd23);
+          boomd24.Top := boomd23.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom2.Left > 40) and (C1 = false) and (boom2.Left <> boomleft2.Left + 40)
+  then
+  begin // левая
+    join(booml21, boomleft2);
+    booml21.Left := boomleft2.Left + 40;
+    if (boom2.Left <> booml21.Left + 40) then
+    begin
+      join(booml22, booml21);
+      booml22.Left := booml21.Left + 40;
+      if (boom2.Left <> booml22.Left + 40) then
+      begin
+        join(booml23, booml22);
+        booml23.Left := booml22.Left + 40;
+        if (boom2.Left <> booml23.Left + 40) then
+        begin
+          join(booml24, booml23);
+          booml24.Left := booml23.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom2.Left < 520) and (C1 = false) and (boom2.Left <> boomright2.Left - 40)
+  then // правая
+  begin
+    join(boomr21, boomright2);
+    boomr21.Left := boomright2.Left - 40;
+    if (boom2.Left <> boomr21.Left - 40) then
+    begin
+      join(boomr22, boomr21);
+      boomr22.Left := boomr21.Left - 40;
+      if (boom2.Left <> boomr22.Left - 40) then
+      begin
+        join(boomr23, boomr22);
+        boomr23.Left := boomr22.Left - 40;
+        if (boom2.Left <> boomr23.Left - 40) then
+        begin
+          join(boomr24, boomr23);
+          boomr24.Left := boomr23.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb2 := false;
+  C1 := false;
+  C2 := false;
+  bombt2.Enabled := false;
+  bombb2.Enabled := true;
+end;
+
+// взрыв 1 играка 2 бомба
+procedure TBomform.bombt12Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка1
+  i, ce1, ce2, bt, x, y: integer;
+begin
+  bombgr[2][1] := 0;
+  bombgr[2][2] := 0;
+  join(boom12, bomb12);
+  back(bomb12);
+  ce1 := boom12.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+
+  ce2 := boom12.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom12.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom12.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom12.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup12, boom12);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb1) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup12.Top := 40
+    else
+      boomup12.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom12.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown12, boom12);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown12.Top := 520
+    else
+      boomdown12.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom12.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft12, boom12);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft12.Left := 40
+    else
+      boomleft12.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom12.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright12, boom12);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright12.Left := 520
+    else
+      boomright12.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom12.Top > 40) and (C2 = false) and (boom12.Top <> boomup12.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu121, boomup12);
+    boomu121.Top := boomup12.Top + 40;
+    if (boom12.Top <> boomu121.Top + 40) then
+    begin
+      join(boomu122, boomu121);
+      boomu122.Top := boomu121.Top + 40;
+      if (boom12.Top <> boomu122.Top + 40) then
+      begin
+        join(boomu123, boomu122);
+        boomu123.Top := boomu122.Top + 40;
+        if (boom12.Top <> boomu123.Top + 40) then
+        begin
+          join(boomu124, boomu123);
+          boomu124.Top := boomu123.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom12.Top < 520) and (C2 = false) and (boom12.Top <> boomdown12.Top - 40)
+  then // нижняя
+  begin
+    join(boomd121, boomdown12);
+    boomd121.Top := boomdown12.Top - 40;
+    if (boom12.Top <> boomd121.Top - 40) then
+    begin
+      join(boomd122, boomd121);
+      boomd122.Top := boomd121.Top - 40;
+      if (boom12.Top <> boomd122.Top - 40) then
+      begin
+        join(boomd123, boomd122);
+        boomd123.Top := boomd122.Top - 40;
+        if (boom12.Top <> boomd123.Top - 40) then
+        begin
+          join(boomd124, boomd123);
+          boomd124.Top := boomd123.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom12.Left > 40) and (C1 = false) and
+    (boom12.Left <> boomleft12.Left + 40) then
+  begin // левая
+    join(booml121, boomleft12);
+    booml121.Left := boomleft12.Left + 40;
+    if (boom12.Left <> booml121.Left + 40) then
+    begin
+      join(booml122, booml121);
+      booml122.Left := booml121.Left + 40;
+      if (boom12.Left <> booml122.Left + 40) then
+      begin
+        join(booml123, booml122);
+        booml123.Left := booml122.Left + 40;
+        if (boom12.Left <> booml123.Left + 40) then
+        begin
+          join(booml124, booml123);
+          booml124.Left := booml123.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom12.Left < 520) and (C1 = false) and
+    (boom12.Left <> boomright12.Left - 40) then // правая
+  begin
+    join(boomr121, boomright12);
+    boomr121.Left := boomright12.Left - 40;
+    if (boom12.Left <> boomr121.Left - 40) then
+    begin
+      join(boomr122, boomr121);
+      boomr122.Left := boomr121.Left - 40;
+      if (boom12.Left <> boomr122.Left - 40) then
+      begin
+        join(boomr123, boomr122);
+        boomr123.Left := boomr122.Left - 40;
+        if (boom12.Left <> boomr123.Left - 40) then
+        begin
+          join(boomr124, boomr123);
+          boomr124.Left := boomr123.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb12 := false;
+  C1 := false;
+  C2 := false;
+  bombt12.Enabled := false;
+  bombb12.Enabled := true;
+end;
+
+// взрыв 1 играка 3 бомба
+procedure TBomform.bombt13Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка1
+  i, ce1, ce2, bt, x, y: integer;
+begin
+
+  bombgr[3][1] := 0;
+  bombgr[3][2] := 0;
+  join(boom13, bomb13);
+  back(bomb13);
+  ce1 := boom13.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+
+  ce2 := boom13.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom13.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom13.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom13.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup13, boom13);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb1) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup13.Top := 40
+    else
+      boomup13.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom13.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown13, boom13);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown13.Top := 520
+    else
+      boomdown13.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom13.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft13, boom13);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft13.Left := 40
+    else
+      boomleft13.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom13.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright13, boom13);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright13.Left := 520
+    else
+      boomright13.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom13.Top > 40) and (C2 = false) and (boom13.Top <> boomup13.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu131, boomup13);
+    boomu131.Top := boomup13.Top + 40;
+    if (boom13.Top <> boomu131.Top + 40) then
+    begin
+      join(boomu132, boomu131);
+      boomu132.Top := boomu131.Top + 40;
+      if (boom13.Top <> boomu132.Top + 40) then
+      begin
+        join(boomu133, boomu132);
+        boomu133.Top := boomu132.Top + 40;
+        if (boom13.Top <> boomu133.Top + 40) then
+        begin
+          join(boomu134, boomu133);
+          boomu134.Top := boomu133.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom13.Top < 520) and (C2 = false) and (boom13.Top <> boomdown13.Top - 40)
+  then // нижняя
+  begin
+    join(boomd131, boomdown13);
+    boomd131.Top := boomdown13.Top - 40;
+    if (boom13.Top <> boomd131.Top - 40) then
+    begin
+      join(boomd132, boomd131);
+      boomd132.Top := boomd131.Top - 40;
+      if (boom13.Top <> boomd132.Top - 40) then
+      begin
+        join(boomd133, boomd132);
+        boomd133.Top := boomd132.Top - 40;
+        if (boom13.Top <> boomd133.Top - 40) then
+        begin
+          join(boomd134, boomd133);
+          boomd134.Top := boomd133.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom13.Left > 40) and (C1 = false) and
+    (boom13.Left <> boomleft13.Left + 40) then
+  begin // левая
+    join(booml131, boomleft13);
+    booml131.Left := boomleft13.Left + 40;
+    if (boom13.Left <> booml131.Left + 40) then
+    begin
+      join(booml132, booml131);
+      booml132.Left := booml131.Left + 40;
+      if (boom13.Left <> booml132.Left + 40) then
+      begin
+        join(booml133, booml132);
+        booml133.Left := booml132.Left + 40;
+        if (boom13.Left <> booml133.Left + 40) then
+        begin
+          join(booml134, booml133);
+          booml134.Left := booml133.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom13.Left < 520) and (C1 = false) and
+    (boom13.Left <> boomright13.Left - 40) then // правая
+  begin
+    join(boomr131, boomright13);
+    boomr131.Left := boomright13.Left - 40;
+    if (boom13.Left <> boomr131.Left - 40) then
+    begin
+      join(boomr132, boomr131);
+      boomr132.Left := boomr131.Left - 40;
+      if (boom13.Left <> boomr132.Left - 40) then
+      begin
+        join(boomr133, boomr132);
+        boomr133.Left := boomr132.Left - 40;
+        if (boom13.Left <> boomr133.Left - 40) then
+        begin
+          join(boomr134, boomr133);
+          boomr134.Left := boomr133.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb13 := false;
+  C1 := false;
+  C2 := false;
+  bombt13.Enabled := false;
+  bombb13.Enabled := true;
+end;
+
+// взрыв 1 играка 4 бомба
+procedure TBomform.bombt14Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка1
+  i, ce1, ce2, bt, x, y: integer;
+begin
+
+  bombgr[4][1] := 0;
+  bombgr[4][2] := 0;
+  join(boom14, bomb14);
+  back(bomb14);
+  ce1 := boom14.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+
+  ce2 := boom14.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom14.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom14.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom14.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup14, boom14);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb1) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup14.Top := 40
+    else
+      boomup14.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom14.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown14, boom14);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown14.Top := 520
+    else
+      boomdown14.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom14.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft14, boom14);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft14.Left := 40
+    else
+      boomleft14.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom14.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright14, boom14);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright14.Left := 520
+    else
+      boomright14.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom14.Top > 40) and (C2 = false) and (boom14.Top <> boomup14.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu141, boomup14);
+    boomu141.Top := boomup14.Top + 40;
+    if (boom14.Top <> boomu141.Top + 40) then
+    begin
+      join(boomu142, boomu141);
+      boomu142.Top := boomu141.Top + 40;
+      if (boom14.Top <> boomu142.Top + 40) then
+      begin
+        join(boomu143, boomu142);
+        boomu143.Top := boomu142.Top + 40;
+        if (boom14.Top <> boomu143.Top + 40) then
+        begin
+          join(boomu144, boomu143);
+          boomu144.Top := boomu143.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom14.Top < 520) and (C2 = false) and (boom14.Top <> boomdown14.Top - 40)
+  then // нижняя
+  begin
+    join(boomd141, boomdown14);
+    boomd141.Top := boomdown14.Top - 40;
+    if (boom14.Top <> boomd141.Top - 40) then
+    begin
+      join(boomd142, boomd141);
+      boomd142.Top := boomd141.Top - 40;
+      if (boom14.Top <> boomd142.Top - 40) then
+      begin
+        join(boomd143, boomd142);
+        boomd143.Top := boomd142.Top - 40;
+        if (boom14.Top <> boomd143.Top - 40) then
+        begin
+          join(boomd144, boomd143);
+          boomd144.Top := boomd143.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom14.Left > 40) and (C1 = false) and
+    (boom14.Left <> boomleft14.Left + 40) then
+  begin // левая
+    join(booml141, boomleft14);
+    booml141.Left := boomleft14.Left + 40;
+    if (boom14.Left <> booml141.Left + 40) then
+    begin
+      join(booml142, booml141);
+      booml142.Left := booml141.Left + 40;
+      if (boom14.Left <> booml142.Left + 40) then
+      begin
+        join(booml143, booml142);
+        booml143.Left := booml142.Left + 40;
+        if (boom14.Left <> booml143.Left + 40) then
+        begin
+          join(booml144, booml143);
+          booml144.Left := booml143.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom14.Left < 520) and (C1 = false) and
+    (boom14.Left <> boomright14.Left - 40) then // правая
+  begin
+    join(boomr141, boomright14);
+    boomr141.Left := boomright14.Left - 40;
+    if (boom14.Left <> boomr141.Left - 40) then
+    begin
+      join(boomr142, boomr141);
+      boomr142.Left := boomr141.Left - 40;
+      if (boom14.Left <> boomr142.Left - 40) then
+      begin
+        join(boomr143, boomr142);
+        boomr143.Left := boomr142.Left - 40;
+        if (boom14.Left <> boomr143.Left - 40) then
+        begin
+          join(boomr144, boomr143);
+          boomr144.Left := boomr143.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb14 := false;
+  C1 := false;
+  C2 := false;
+  bombt14.Enabled := false;
+  bombb14.Enabled := true;
+end;
+
+// взрыв 1 играка 5 бомба
+procedure TBomform.bombt15Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка1
+  i, ce1, ce2, bt, x, y: integer;
+begin
+
+  bombgr[5][1] := 0;
+  bombgr[5][2] := 0;
+  join(boom15, bomb15);
+  back(bomb15);
+  ce1 := boom15.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+
+  ce2 := boom15.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom15.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom15.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom15.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup15, boom15);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb1) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup15.Top := 40
+    else
+      boomup15.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom15.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown15, boom15);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown15.Top := 520
+    else
+      boomdown15.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom15.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft15, boom15);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft15.Left := 40
+    else
+      boomleft15.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom15.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright15, boom15);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright15.Left := 520
+    else
+      boomright15.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom15.Top > 40) and (C2 = false) and (boom15.Top <> boomup15.Top + 40)
+  then
+  // верхняя
+  begin
+    join(boomu151, boomup15);
+    boomu151.Top := boomup15.Top + 40;
+    if (boom15.Top <> boomu151.Top + 40) then
+    begin
+      join(boomu152, boomu151);
+      boomu152.Top := boomu151.Top + 40;
+      if (boom15.Top <> boomu152.Top + 40) then
+      begin
+        join(boomu153, boomu152);
+        boomu153.Top := boomu152.Top + 40;
+        if (boom15.Top <> boomu153.Top + 40) then
+        begin
+          join(boomu154, boomu153);
+          boomu154.Top := boomu153.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom15.Top < 520) and (C2 = false) and (boom15.Top <> boomdown15.Top - 40)
+  then // нижняя
+  begin
+    join(boomd151, boomdown15);
+    boomd151.Top := boomdown15.Top - 40;
+    if (boom15.Top <> boomd151.Top - 40) then
+    begin
+      join(boomd152, boomd151);
+      boomd152.Top := boomd151.Top - 40;
+      if (boom15.Top <> boomd152.Top - 40) then
+      begin
+        join(boomd153, boomd152);
+        boomd153.Top := boomd152.Top - 40;
+        if (boom15.Top <> boomd153.Top - 40) then
+        begin
+          join(boomd154, boomd153);
+          boomd154.Top := boomd153.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom15.Left > 40) and (C1 = false) and
+    (boom15.Left <> boomleft15.Left + 40) then
+  begin // левая
+    join(booml151, boomleft15);
+    booml151.Left := boomleft15.Left + 40;
+    if (boom15.Left <> booml151.Left + 40) then
+    begin
+      join(booml152, booml151);
+      booml152.Left := booml151.Left + 40;
+      if (boom15.Left <> booml152.Left + 40) then
+      begin
+        join(booml153, booml152);
+        booml153.Left := booml152.Left + 40;
+        if (boom15.Left <> booml153.Left + 40) then
+        begin
+          join(booml154, booml153);
+          booml154.Left := booml153.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom15.Left < 520) and (C1 = false) and
+    (boom15.Left <> boomright15.Left - 40) then // правая
+  begin
+    join(boomr151, boomright15);
+    boomr151.Left := boomright15.Left - 40;
+    if (boom15.Left <> boomr151.Left - 40) then
+    begin
+      join(boomr152, boomr151);
+      boomr152.Left := boomr151.Left - 40;
+      if (boom15.Left <> boomr152.Left - 40) then
+      begin
+        join(boomr153, boomr152);
+        boomr153.Left := boomr152.Left - 40;
+        if (boom15.Left <> boomr153.Left - 40) then
+        begin
+          join(boomr154, boomr153);
+          boomr154.Left := boomr153.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb15 := false;
+  C1 := false;
+  C2 := false;
+  bombt15.Enabled := false;
+  bombb15.Enabled := true;
+end;
+
+// взрыв 1 играка 1 бомба
+procedure TBomform.bombt1Timer(Sender: TObject);
+var
+  C1, C2, gt: boolean; // взрыв бомбы играка1
+  i, ce1, ce2, bt, x, y: integer;
+begin
+
+  bombgr[1][1] := 0;
+  bombgr[1][2] := 0;
+  join(boom1, bomb1);
+  back(bomb1);
+  ce1 := boom1.Left;
+  ce1 := ce1 div 40;
+  x := ce1;
+
+  ce2 := boom1.Top;
+  ce2 := ce2 div 40;
+  y := ce2;
+
+  for i := 0 to 18 do
+    if (graund[i] = boom1.Top) then
+      C1 := true;
+  for i := 0 to 18 do
+    if (graund[i] = boom1.Left) then
+      C2 := true;
+  // концы взрыва
+
+  if (boom1.Top > 40) and (C2 = false) then
+  begin // вверхний
+    join(boomup, boom1);
+    gt := false;
+    while ((y <> ce2 - bonus_bomb1) and (gt = false)) do
+    begin
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y - 1;
+      bt := y * 40;
+    end;
+
+    if (bt < 40) then
+      boomup.Top := 40
+    else
+      boomup.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom1.Top < 520) and (C2 = false) then
+  begin // нижний
+    join(boomdown, boom1);
+    gt := false;
+    while ((y <> ce2 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[ce1][y] = 1 then
+        gt := true
+      else
+        y := y + 1;
+      bt := y * 40;
+    end;
+
+    if (bt >= 520) then
+      boomdown.Top := 520
+    else
+      boomdown.Top := bt;
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom1.Left > 40) and (C1 = false) then
+  begin // взрыв левый край
+    join(boomleft, boom1);
+    gt := false;
+    while ((x <> ce1 - bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x - 1;
+      bt := x * 40;
+    end;
+
+    if (bt < 40) then
+      boomleft.Left := 40
+    else
+      boomleft.Left := bt;
+
+  end;
+
+  y := ce2;
+  x := ce1;
+
+  if (boom1.Left < 520) and (C1 = false) then
+  begin // взрыв правого края
+    join(boomright, boom1);
+    gt := false;
+    while ((x <> ce1 + bonus_bomb1) and (gt = false)) do
+    begin
+
+      if gr[x][ce2] = 1 then
+        gt := true
+      else
+        x := x + 1;
+      bt := x * 40;
+    end;
+
+    if (bt > 520) then
+      boomright.Left := 520
+    else
+      boomright.Left := bt;
+  end;
+
+  // средние полосы взрыва
+  if (boom1.Top > 40) and (C2 = false) and (boom1.Top <> boomup.Top + 40) then
+  // верхняя
+  begin
+    join(boomu1, boomup);
+    boomu1.Top := boomup.Top + 40;
+    if (boom1.Top <> boomu1.Top + 40) then
+    begin
+      join(boomu2, boomu1);
+      boomu2.Top := boomu1.Top + 40;
+      if (boom1.Top <> boomu2.Top + 40) then
+      begin
+        join(boomu3, boomu2);
+        boomu3.Top := boomu2.Top + 40;
+        if (boom1.Top <> boomu3.Top + 40) then
+        begin
+          join(boomu4, boomu3);
+          boomu4.Top := boomu3.Top + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom1.Top < 520) and (C2 = false) and (boom1.Top <> boomdown.Top - 40)
+  then // нижняя
+  begin
+    join(boomd1, boomdown);
+    boomd1.Top := boomdown.Top - 40;
+    if (boom1.Top <> boomd1.Top - 40) then
+    begin
+      join(boomd2, boomd1);
+      boomd2.Top := boomd1.Top - 40;
+      if (boom1.Top <> boomd2.Top - 40) then
+      begin
+        join(boomd3, boomd2);
+        boomd3.Top := boomd2.Top - 40;
+        if (boom1.Top <> boomd3.Top - 40) then
+        begin
+          join(boomd4, boomd3);
+          boomd4.Top := boomd3.Top - 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom1.Left > 40) and (C1 = false) and (boom1.Left <> boomleft.Left + 40)
+  then
+  begin // левая
+    join(booml1, boomleft);
+    booml1.Left := boomleft.Left + 40;
+    if (boom1.Left <> booml1.Left + 40) then
+    begin
+      join(booml2, booml1);
+      booml2.Left := booml1.Left + 40;
+      if (boom1.Left <> booml2.Left + 40) then
+      begin
+        join(booml3, booml2);
+        booml3.Left := booml2.Left + 40;
+        if (boom1.Left <> booml3.Left + 40) then
+        begin
+          join(booml4, booml3);
+          booml4.Left := booml3.Left + 40;
+        end;
+      end;
+    end;
+  end;
+  if (boom1.Left < 520) and (C1 = false) and (boom1.Left <> boomright.Left - 40)
+  then // правая
+  begin
+    join(boomr1, boomright);
+    boomr1.Left := boomright.Left - 40;
+    if (boom1.Left <> boomr1.Left - 40) then
+    begin
+      join(boomr2, boomr1);
+      boomr2.Left := boomr1.Left - 40;
+      if (boom1.Left <> boomr2.Left - 40) then
+      begin
+        join(boomr3, boomr2);
+        boomr3.Left := boomr2.Left - 40;
+        if (boom1.Left <> boomr3.Left - 40) then
+        begin
+          join(boomr4, boomr3);
+          boomr4.Left := boomr3.Left - 40;
+        end;
+      end;
+    end;
+  end;
+
+  bb1 := false;
+  C1 := false;
+  C2 := false;
+  bombt1.Enabled := false;
+  bombb1.Enabled := true;
+end;
+
+// возврат после взрыва 12 бомбы
+procedure TBomform.bombb12Timer(Sender: TObject);
+begin
+  back(boom12);
+  back(boomup12);
+  back(boomdown12);
+  back(boomleft12);
+  back(boomright12);
+  back(boomu121);
+  back(boomu122);
+  back(boomu123);
+  back(boomu124);
+
+  back(boomd121);
+  back(boomd122);
+  back(boomd123);
+  back(boomd124);
+
+  back(booml121);
+  back(booml122);
+  back(booml123);
+  back(booml124);
+
+  back(boomr121);
+  back(boomr122);
+  back(boomr123);
+  back(boomr124);
+
+  bombb12.Enabled := false;
+end;
+
+// возврат после взрыва 13 бомбы
+procedure TBomform.bombb13Timer(Sender: TObject);
+begin
+  back(boom13);
+  back(boomup13);
+  back(boomdown13);
+  back(boomleft13);
+  back(boomright13);
+  back(boomu131);
+  back(boomu132);
+  back(boomu133);
+  back(boomu134);
+
+  back(boomd131);
+  back(boomd132);
+  back(boomd133);
+  back(boomd134);
+
+  back(booml131);
+  back(booml132);
+  back(booml133);
+  back(booml134);
+
+  back(boomr131);
+  back(boomr132);
+  back(boomr133);
+  back(boomr134);
+
+  bombb13.Enabled := false;
+end;
+
+// возврат после взрыва 14 бомбы
+procedure TBomform.bombb14Timer(Sender: TObject);
+begin
+  back(boom14);
+  back(boomup14);
+  back(boomdown14);
+  back(boomleft14);
+  back(boomright14);
+  back(boomu141);
+  back(boomu142);
+  back(boomu143);
+  back(boomu144);
+
+  back(boomd141);
+  back(boomd142);
+  back(boomd143);
+  back(boomd144);
+
+  back(booml141);
+  back(booml142);
+  back(booml143);
+  back(booml144);
+
+  back(boomr141);
+  back(boomr142);
+  back(boomr143);
+  back(boomr144);
+
+  bombb14.Enabled := false;
+end;
+
+// возврат после взрыва 15 бомбы
+procedure TBomform.bombb15Timer(Sender: TObject);
+begin
+  back(boom15);
+  back(boomup15);
+  back(boomdown15);
+  back(boomleft15);
+  back(boomright15);
+  back(boomu151);
+  back(boomu152);
+  back(boomu153);
+  back(boomu154);
+
+  back(boomd151);
+  back(boomd152);
+  back(boomd153);
+  back(boomd154);
+
+  back(booml151);
+  back(booml152);
+  back(booml153);
+  back(booml154);
+
+  back(boomr151);
+  back(boomr152);
+  back(boomr153);
+  back(boomr154);
+
+  bombb15.Enabled := false;
+end;
+
+// возврат после взрыва 1 бомбы
+procedure TBomform.bombb1Timer(Sender: TObject);
+begin
+  back(boom1);
+  back(boomup);
+  back(boomdown);
+  back(boomleft);
+  back(boomright);
+  back(boomu1);
+  back(boomu2);
+  back(boomu3);
+  back(boomu4);
+
+  back(boomd1);
+  back(boomd2);
+  back(boomd3);
+  back(boomd4);
+
+  back(booml1);
+  back(booml2);
+  back(booml3);
+  back(booml4);
+
+  back(boomr1);
+  back(boomr2);
+  back(boomr3);
+  back(boomr4);
+
+  bombb1.Enabled := false;
+end;
+
+// возврат после взрыва 22 бомбы
+procedure TBomform.bombb22Timer(Sender: TObject);
+begin
+  back(boom22);
+  back(boomup22);
+  back(boomdown22);
+  back(boomleft22);
+  back(boomright22);
+
+  back(boomu221);
+  back(boomu222);
+  back(boomu223);
+  back(boomu224);
+
+  back(boomd221);
+  back(boomd222);
+  back(boomd223);
+  back(boomd224);
+
+  back(booml221);
+  back(booml222);
+  back(booml223);
+  back(booml224);
+
+  back(boomr221);
+  back(boomr222);
+  back(boomr223);
+  back(boomr224);
+
+  bombb22.Enabled := false;
+end;
+
+// возврат после взрыва 23 бомбы
+procedure TBomform.bombb23Timer(Sender: TObject);
+begin
+  back(boom23);
+  back(boomup23);
+  back(boomdown23);
+  back(boomleft23);
+  back(boomright23);
+
+  back(boomu231);
+  back(boomu232);
+  back(boomu233);
+  back(boomu234);
+
+  back(boomd231);
+  back(boomd232);
+  back(boomd233);
+  back(boomd234);
+
+  back(booml231);
+  back(booml232);
+  back(booml233);
+  back(booml234);
+
+  back(boomr231);
+  back(boomr232);
+  back(boomr233);
+  back(boomr234);
+
+  bombb23.Enabled := false;
+end;
+
+// возврат после взрыва 24 бомбы
+procedure TBomform.bombb24Timer(Sender: TObject);
+begin
+  back(boom24);
+  back(boomup24);
+  back(boomdown24);
+  back(boomleft24);
+  back(boomright24);
+
+  back(boomu241);
+  back(boomu242);
+  back(boomu243);
+  back(boomu244);
+
+  back(boomd241);
+  back(boomd242);
+  back(boomd243);
+  back(boomd244);
+
+  back(booml241);
+  back(booml242);
+  back(booml243);
+  back(booml244);
+
+  back(boomr241);
+  back(boomr242);
+  back(boomr243);
+  back(boomr244);
+
+  bombb24.Enabled := false;
+
+end;
+
+// возврат после взрыва 25 бомбы
+procedure TBomform.bombb25Timer(Sender: TObject);
+begin
+  back(boom25);
+  back(boomup25);
+  back(boomdown25);
+  back(boomleft25);
+  back(boomright25);
+
+  back(boomu251);
+  back(boomu252);
+  back(boomu253);
+  back(boomu254);
+
+  back(boomd251);
+  back(boomd252);
+  back(boomd253);
+  back(boomd254);
+
+  back(booml251);
+  back(booml252);
+  back(booml253);
+  back(booml254);
+
+  back(boomr251);
+  back(boomr252);
+  back(boomr253);
+  back(boomr254);
+
+  bombb25.Enabled := false;
+
+end;
+
+// возврат после взрыва 2 бомбы
+procedure TBomform.bombb2Timer(Sender: TObject);
+begin
+  back(boom2);
+  back(boomup2);
+  back(boomdown2);
+  back(boomleft2);
+  back(boomright2);
+
+  back(boomu21);
+  back(boomu22);
+  back(boomu23);
+  back(boomu24);
+
+  back(boomd21);
+  back(boomd22);
+  back(boomd23);
+  back(boomd24);
+
+  back(booml21);
+  back(booml22);
+  back(booml23);
+  back(booml24);
+
+  back(boomr21);
+  back(boomr22);
+  back(boomr23);
+  back(boomr24);
+
+  bombb2.Enabled := false;
+end;
+
+end.
